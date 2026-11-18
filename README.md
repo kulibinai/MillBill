@@ -3,6 +3,7 @@
 MillBill turns a boundary-representation part, its milling stock and its material into G-code for indexed three-axis machining. A locally hosted open model revises a standard-practice plan of operations, tools and cutting parameters. A geometric harness writes the toolpaths, simulates material removal and returns surface deviations so the plan can be refined. The model never writes coordinates or G-code. Setups are chosen by what the available cutters can reach, not by visibility alone.
 
 - Paper: [arXiv:2611.22565](https://arxiv.org/abs/2611.22565)
+- Dataset: <https://huggingface.co/datasets/kulibinai/millbill>
 
 ## What is here
 
