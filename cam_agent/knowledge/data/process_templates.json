@@ -1,0 +1,375 @@
+{
+ "_source": "process_templates",
+ "_comment": "Process catalog with the standard-practice phase of every process (0 setup, 10 datum facing, 20 roughing, 30 heat treatment, 40 finishing, 50-57 hole making, 60 chamfer/countersink, 65 ream/bore, 70 threads, 78 grinding, 80 deburr, 90+ off-machine) and the economic accuracy of each method (tolerance_it = IT grade, ra_um = Ra it holds without special measures; reference tables of machining accuracy). 'feature_processes' maps a recognised feature (sub)type to the processes it needs, in order. Hard ordering rules are in dependency_rules.json.",
+ "part_categories": {
+  "machined_prismatic": {
+   "description": "Milled component from plate, bar or block stock (vice or fixture, 3-axis + indexed setups)",
+   "template": [
+    "setup",
+    "facing",
+    "cavity_roughing",
+    "profile_milling",
+    "pocket_milling",
+    "slot_milling",
+    "step_milling",
+    "heat_treatment",
+    "surface_finishing",
+    "profile_finishing",
+    "pocket_finishing",
+    "slot_finishing",
+    "fillet_milling",
+    "spot_drilling",
+    "drilling",
+    "counterboring",
+    "chamfering",
+    "countersinking",
+    "reaming",
+    "boring",
+    "tapping",
+    "thread_milling",
+    "grinding",
+    "deburring",
+    "cleaning",
+    "inspection",
+    "coating"
+   ]
+  }
+ },
+ "feature_processes": {
+  "planar_face": [
+   "facing"
+  ],
+  "pocket": [
+   "pocket_milling",
+   "pocket_finishing"
+  ],
+  "slot": [
+   "slot_milling",
+   "slot_finishing"
+  ],
+  "step": [
+   "step_milling"
+  ],
+  "boss": [
+   "profile_milling",
+   "profile_finishing"
+  ],
+  "outer_profile": [
+   "profile_milling",
+   "profile_finishing"
+  ],
+  "hole": [
+   "spot_drilling",
+   "drilling"
+  ],
+  "precision_hole": [
+   "spot_drilling",
+   "drilling",
+   "reaming"
+  ],
+  "large_precision_hole": [
+   "spot_drilling",
+   "drilling",
+   "boring"
+  ],
+  "thread": [
+   "spot_drilling",
+   "drilling",
+   "tapping"
+  ],
+  "thread_milled": [
+   "spot_drilling",
+   "drilling",
+   "thread_milling"
+  ],
+  "counterbore": [
+   "spot_drilling",
+   "drilling",
+   "counterboring"
+  ],
+  "countersink": [
+   "spot_drilling",
+   "drilling",
+   "countersinking"
+  ],
+  "chamfer": [
+   "chamfering"
+  ],
+  "fillet": [
+   "fillet_milling"
+  ],
+  "cavity": [
+   "cavity_roughing",
+   "surface_finishing"
+  ]
+ },
+ "process_catalog": {
+  "setup": {
+   "category": "auxiliary",
+   "tooling": false,
+   "phase": 0,
+   "description": "Clamp the stock, set the work offset (G54...)"
+  },
+  "facing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 10,
+   "tolerance_it": 8,
+   "ra_um": 1.6,
+   "description": "Face mill the top surface (datum)"
+  },
+  "cavity_roughing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 20,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Z-level roughing of everything reachable from this side (height-map, leaves finishing stock)"
+  },
+  "profile_milling": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 20,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Rough the outside contour"
+  },
+  "pocket_milling": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 20,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Rough a pocket (adaptive / offset)"
+  },
+  "slot_milling": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 20,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Rough a slot"
+  },
+  "step_milling": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 20,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Mill an open step / shoulder"
+  },
+  "counterboring": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 57,
+   "tolerance_it": 10,
+   "ra_um": 3.2,
+   "description": "Mill a counterbore (DIN 974) after the through hole is drilled"
+  },
+  "heat_treatment": {
+   "category": "thermal",
+   "tooling": false,
+   "phase": 30,
+   "description": "Quench and temper / stress relieve (off-machine, between roughing and finishing)"
+  },
+  "surface_finishing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 40,
+   "tolerance_it": 8,
+   "ra_um": 1.6,
+   "description": "Finish floors (plateaus), waterline walls, drop-cutter raster on slopes"
+  },
+  "profile_finishing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 40,
+   "tolerance_it": 7,
+   "ra_um": 1.6,
+   "description": "Finish the outside contour"
+  },
+  "pocket_finishing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 40,
+   "tolerance_it": 7,
+   "ra_um": 1.6,
+   "description": "Finish pocket walls and floor"
+  },
+  "slot_finishing": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 40,
+   "tolerance_it": 7,
+   "ra_um": 1.6,
+   "description": "Finish slot walls and floor"
+  },
+  "fillet_milling": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 40,
+   "tolerance_it": 9,
+   "ra_um": 3.2,
+   "description": "Mill external fillets with a ball endmill"
+  },
+  "spot_drilling": {
+   "category": "drilling",
+   "tooling": true,
+   "phase": 50,
+   "tolerance_it": 12,
+   "ra_um": 6.3,
+   "description": "Spot drill hole positions (90 deg)"
+  },
+  "drilling": {
+   "category": "drilling",
+   "tooling": true,
+   "phase": 55,
+   "tolerance_it": 11,
+   "ra_um": 6.3,
+   "description": "Twist drill (peck when deep)"
+  },
+  "chamfering": {
+   "category": "milling",
+   "tooling": true,
+   "phase": 60,
+   "tolerance_it": 12,
+   "ra_um": 3.2,
+   "description": "Mill modelled chamfers with a 90 deg chamfer mill (ball endmill for other angles)"
+  },
+  "countersinking": {
+   "category": "drilling",
+   "tooling": true,
+   "phase": 60,
+   "tolerance_it": 10,
+   "ra_um": 3.2,
+   "description": "Countersink hole entries (90 deg, ISO 15065)"
+  },
+  "reaming": {
+   "category": "drilling",
+   "tooling": true,
+   "phase": 65,
+   "tolerance_it": 7,
+   "ra_um": 0.8,
+   "description": "Ream to H7 (G85 feed in / feed out)"
+  },
+  "boring": {
+   "category": "drilling",
+   "tooling": true,
+   "phase": 65,
+   "tolerance_it": 6,
+   "ra_um": 0.8,
+   "description": "Fine bore (G85 / G76)"
+  },
+  "tapping": {
+   "category": "threading",
+   "tooling": true,
+   "phase": 70,
+   "tolerance_it": 7,
+   "ra_um": 3.2,
+   "description": "Rigid tapping (G84)"
+  },
+  "thread_milling": {
+   "category": "threading",
+   "tooling": true,
+   "phase": 70,
+   "tolerance_it": 6,
+   "ra_um": 1.6,
+   "description": "Helical thread milling"
+  },
+  "deburring": {
+   "category": "finishing",
+   "tooling": true,
+   "phase": 80,
+   "ra_um": 3.2,
+   "description": "Break remaining sharp edges 0.1-0.3 mm (ISO 13715)"
+  },
+  "grinding": {
+   "category": "finishing",
+   "tooling": true,
+   "phase": 78,
+   "tolerance_it": 6,
+   "ra_um": 0.4,
+   "description": "Surface grind toleranced faces (off-machine, after heat treatment, before deburring)"
+  },
+  "cleaning": {
+   "category": "auxiliary",
+   "tooling": false,
+   "phase": 90,
+   "description": "Wash and dry, remove chips"
+  },
+  "inspection": {
+   "category": "quality",
+   "tooling": false,
+   "phase": 95,
+   "description": "CMM / gauge inspection of toleranced features"
+  },
+  "coating": {
+   "category": "surface",
+   "tooling": false,
+   "phase": 98,
+   "description": "Anodize / plate / passivate / paint"
+  }
+ },
+ "material_process_compatibility": {
+  "aluminum": {
+   "incompatible": [],
+   "discouraged": [
+    "grinding"
+   ],
+   "notes": "Anodizing is the usual coating; grinding clogs wheels"
+  },
+  "stainless": {
+   "incompatible": [],
+   "discouraged": [],
+   "notes": "Passivation instead of anodizing; thread milling preferred for M10+"
+  },
+  "steel": {
+   "incompatible": [],
+   "discouraged": [],
+   "notes": "Heat treatment allowed between roughing and finishing"
+  },
+  "cast iron": {
+   "incompatible": [],
+   "discouraged": [],
+   "notes": "Dry machining; no heat treatment of grey iron after machining"
+  },
+  "titanium": {
+   "incompatible": [],
+   "discouraged": [
+    "tapping"
+   ],
+   "notes": "Thread milling preferred; anodize type 2 possible"
+  },
+  "superalloy": {
+   "incompatible": [],
+   "discouraged": [
+    "tapping"
+   ],
+   "notes": "Thread milling instead of tapping"
+  },
+  "hardened steel": {
+   "incompatible": [
+    "tapping"
+   ],
+   "discouraged": [
+    "drilling"
+   ],
+   "notes": "Threads by thread milling only; holes preferably before hardening"
+  },
+  "copper alloy": {
+   "incompatible": [],
+   "discouraged": [
+    "grinding"
+   ],
+   "notes": ""
+  },
+  "polymer": {
+   "incompatible": [
+    "heat_treatment",
+    "grinding"
+   ],
+   "discouraged": [],
+   "notes": "No thermal processes"
+  }
+ }
+}

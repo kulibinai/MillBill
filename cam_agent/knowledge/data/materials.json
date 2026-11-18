@@ -1,0 +1,961 @@
+{
+ "_source": "material_database",
+ "_comment": "ISO 513 machining groups (P steel, M stainless, K cast iron, N non-ferrous/plastics, S superalloys/titanium, H hardened). Cutting speeds are representative starting values for solid carbide (coated where appropriate) and HSS(-E/Co) tools, taken from typical tool-maker catalogues; kc1.1 / mc are Kienzle specific cutting force parameters (hm = 1 mm). Designations: EN / DIN W.-Nr. / AISI-UNS / JIS aliases.",
+ "materials": [
+  {
+   "id": "AL6061-T6",
+   "name": "Aluminium EN AW-6061-T6 (AlMg1SiCu)",
+   "aliases": [
+    "al 6061",
+    "6061",
+    "6061-t6",
+    "en aw-6061",
+    "almg1sicu",
+    "3.3211",
+    "aluminum 6061",
+    "aluminium 6061",
+    "a96061"
+   ],
+   "iso_group": "N",
+   "group": "aluminum",
+   "hardness_hb": 95,
+   "machinability_pct": 300,
+   "kc11_n_mm2": 700,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 400,
+     "mill_finish": 500,
+     "drill": 200,
+     "ream": 60,
+     "thread_mill": 250,
+     "tap": 50,
+     "face": 440
+    },
+    "HSS": {
+     "mill_rough": 120,
+     "mill_finish": 144,
+     "drill": 60,
+     "ream": 20,
+     "tap": 25
+    }
+   },
+   "coolant": "flood or MQL",
+   "min_feature_mm": 1.0,
+   "max_hole_depth_ratio": 6.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Polished 2-3 flute uncoated/ZrN/DLC tools; TiAlN reacts with aluminium (built-up edge)."
+  },
+  {
+   "id": "AL7075-T6",
+   "name": "Aluminium EN AW-7075-T6 (AlZn5.5MgCu)",
+   "aliases": [
+    "7075",
+    "al 7075",
+    "7075-t6",
+    "en aw-7075",
+    "alzn5.5mgcu",
+    "3.4365",
+    "a97075"
+   ],
+   "iso_group": "N",
+   "group": "aluminum",
+   "hardness_hb": 150,
+   "machinability_pct": 250,
+   "kc11_n_mm2": 800,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 350,
+     "mill_finish": 450,
+     "drill": 180,
+     "ream": 50,
+     "thread_mill": 220,
+     "tap": 40,
+     "face": 385
+    },
+    "HSS": {
+     "mill_rough": 100,
+     "mill_finish": 120,
+     "drill": 50,
+     "ream": 18,
+     "tap": 20
+    }
+   },
+   "coolant": "flood",
+   "min_feature_mm": 1.0,
+   "max_hole_depth_ratio": 6.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Higher strength than 6061; avoid sharp internal corners (stress-corrosion cracking)."
+  },
+  {
+   "id": "AL5083",
+   "name": "Aluminium EN AW-5083 (AlMg4.5Mn0.7)",
+   "aliases": [
+    "5083",
+    "en aw-5083",
+    "almg4.5mn0.7",
+    "3.3547",
+    "a95083"
+   ],
+   "iso_group": "N",
+   "group": "aluminum",
+   "hardness_hb": 75,
+   "machinability_pct": 220,
+   "kc11_n_mm2": 650,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 380,
+     "mill_finish": 480,
+     "drill": 180,
+     "ream": 50,
+     "thread_mill": 220,
+     "tap": 44,
+     "face": 418
+    },
+    "HSS": {
+     "mill_rough": 110,
+     "mill_finish": 132,
+     "drill": 55,
+     "ream": 18,
+     "tap": 22
+    }
+   },
+   "coolant": "flood or MQL",
+   "min_feature_mm": 1.0,
+   "max_hole_depth_ratio": 6.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Gummy, non-heat-treatable; sharp tools and good chip evacuation."
+  },
+  {
+   "id": "S235",
+   "name": "Structural steel S235JR / AISI 1018",
+   "aliases": [
+    "s235",
+    "s235jr",
+    "1.0038",
+    "st37",
+    "1018",
+    "aisi 1018",
+    "low carbon steel",
+    "mild steel",
+    "g10180"
+   ],
+   "iso_group": "P",
+   "group": "steel",
+   "hardness_hb": 130,
+   "machinability_pct": 70,
+   "kc11_n_mm2": 1500,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 220,
+     "mill_finish": 260,
+     "drill": 120,
+     "ream": 50,
+     "thread_mill": 140,
+     "tap": 30,
+     "face": 242
+    },
+    "HSS": {
+     "mill_rough": 35,
+     "mill_finish": 42,
+     "drill": 30,
+     "ream": 12,
+     "tap": 15
+    }
+   },
+   "coolant": "flood",
+   "min_feature_mm": 1.2,
+   "max_hole_depth_ratio": 5.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.8,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Soft, gummy at low speed; keep chip load up."
+  },
+  {
+   "id": "C45",
+   "name": "Carbon steel C45 / AISI 1045",
+   "aliases": [
+    "c45",
+    "1.0503",
+    "ck45",
+    "1045",
+    "aisi 1045",
+    "s45c",
+    "carbon steel",
+    "steel",
+    "g10450"
+   ],
+   "iso_group": "P",
+   "group": "steel",
+   "hardness_hb": 190,
+   "machinability_pct": 60,
+   "kc11_n_mm2": 1700,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 180,
+     "mill_finish": 220,
+     "drill": 100,
+     "ream": 40,
+     "thread_mill": 120,
+     "tap": 24,
+     "face": 198
+    },
+    "HSS": {
+     "mill_rough": 30,
+     "mill_finish": 36,
+     "drill": 25,
+     "ream": 10,
+     "tap": 12
+    }
+   },
+   "coolant": "flood",
+   "min_feature_mm": 1.2,
+   "max_hole_depth_ratio": 5.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.8,
+   "surface_finish_ra_um": 3.2,
+   "notes": "General-purpose medium-carbon steel; can be quenched and tempered after roughing."
+  },
+  {
+   "id": "42CRMO4",
+   "name": "Alloy steel 42CrMo4+QT / AISI 4140",
+   "aliases": [
+    "42crmo4",
+    "1.7225",
+    "4140",
+    "aisi 4140",
+    "scm440",
+    "alloy steel",
+    "chromoly",
+    "g41400"
+   ],
+   "iso_group": "P",
+   "group": "steel",
+   "hardness_hb": 280,
+   "machinability_pct": 50,
+   "kc11_n_mm2": 1900,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 140,
+     "mill_finish": 170,
+     "drill": 80,
+     "ream": 30,
+     "thread_mill": 100,
+     "tap": 16,
+     "face": 154
+    },
+    "HSS": {
+     "mill_rough": 20,
+     "mill_finish": 24,
+     "drill": 15,
+     "ream": 8,
+     "tap": 8
+    }
+   },
+   "coolant": "flood",
+   "min_feature_mm": 1.5,
+   "max_hole_depth_ratio": 4.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.8,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Quenched and tempered ~28-32 HRC; rigid set-up, coated carbide."
+  },
+  {
+   "id": "SS304",
+   "name": "Stainless steel X5CrNi18-10 (1.4301) / AISI 304",
+   "aliases": [
+    "ss304",
+    "304",
+    "aisi 304",
+    "1.4301",
+    "x5crni18-10",
+    "stainless 304",
+    "a2",
+    "s30400"
+   ],
+   "iso_group": "M",
+   "group": "stainless",
+   "hardness_hb": 200,
+   "machinability_pct": 45,
+   "kc11_n_mm2": 2000,
+   "mc": 0.21,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 110,
+     "mill_finish": 140,
+     "drill": 60,
+     "ream": 20,
+     "thread_mill": 80,
+     "tap": 12,
+     "face": 121
+    },
+    "HSS": {
+     "mill_rough": 18,
+     "mill_finish": 22,
+     "drill": 12,
+     "ream": 5,
+     "tap": 6
+    }
+   },
+   "coolant": "flood, high pressure",
+   "min_feature_mm": 1.5,
+   "max_hole_depth_ratio": 3.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.0,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Work hardens: keep feed up, never dwell or rub; TiAlN/AlCrN coated carbide."
+  },
+  {
+   "id": "SS316L",
+   "name": "Stainless steel X2CrNiMo17-12-2 (1.4404) / AISI 316L",
+   "aliases": [
+    "ss316",
+    "316",
+    "316l",
+    "1.4404",
+    "aisi 316",
+    "aisi 316l",
+    "a4",
+    "s31603"
+   ],
+   "iso_group": "M",
+   "group": "stainless",
+   "hardness_hb": 215,
+   "machinability_pct": 36,
+   "kc11_n_mm2": 2150,
+   "mc": 0.21,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 100,
+     "mill_finish": 120,
+     "drill": 55,
+     "ream": 18,
+     "thread_mill": 70,
+     "tap": 10,
+     "face": 110
+    },
+    "HSS": {
+     "mill_rough": 15,
+     "mill_finish": 18,
+     "drill": 10,
+     "ream": 4,
+     "tap": 5
+    }
+   },
+   "coolant": "flood, high pressure",
+   "min_feature_mm": 1.5,
+   "max_hole_depth_ratio": 3.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.0,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Worst work hardening of the common grades; sharp edges, rigid set-up."
+  },
+  {
+   "id": "GJL250",
+   "name": "Grey cast iron EN-GJL-250 / ASTM A48 class 35",
+   "aliases": [
+    "gjl-250",
+    "en-gjl-250",
+    "gg25",
+    "gg-25",
+    "0.6025",
+    "class 35",
+    "grey cast iron",
+    "gray cast iron",
+    "cast iron"
+   ],
+   "iso_group": "K",
+   "group": "cast iron",
+   "hardness_hb": 210,
+   "machinability_pct": 70,
+   "kc11_n_mm2": 1150,
+   "mc": 0.28,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 180,
+     "mill_finish": 220,
+     "drill": 100,
+     "ream": 40,
+     "thread_mill": 120,
+     "tap": 24,
+     "face": 198
+    },
+    "HSS": {
+     "mill_rough": 30,
+     "mill_finish": 36,
+     "drill": 25,
+     "ream": 10,
+     "tap": 12
+    }
+   },
+   "coolant": "dry or air blast",
+   "min_feature_mm": 2.0,
+   "max_hole_depth_ratio": 5.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.0,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Abrasive short chips; dry machining or air blast, extraction for graphite dust."
+  },
+  {
+   "id": "GJS500",
+   "name": "Ductile iron EN-GJS-500-7 / ASTM A536 70-50-05",
+   "aliases": [
+    "gjs-500",
+    "en-gjs-500-7",
+    "ggg50",
+    "ggg-50",
+    "0.7050",
+    "ductile iron",
+    "nodular cast iron"
+   ],
+   "iso_group": "K",
+   "group": "cast iron",
+   "hardness_hb": 200,
+   "machinability_pct": 60,
+   "kc11_n_mm2": 1400,
+   "mc": 0.28,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 150,
+     "mill_finish": 180,
+     "drill": 90,
+     "ream": 35,
+     "thread_mill": 100,
+     "tap": 20,
+     "face": 165
+    },
+    "HSS": {
+     "mill_rough": 25,
+     "mill_finish": 30,
+     "drill": 20,
+     "ream": 8,
+     "tap": 10
+    }
+   },
+   "coolant": "flood or dry",
+   "min_feature_mm": 2.0,
+   "max_hole_depth_ratio": 5.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.0,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Longer chips than grey iron; flood coolant improves tool life."
+  },
+  {
+   "id": "TI6AL4V",
+   "name": "Titanium Ti-6Al-4V (3.7165, Grade 5)",
+   "aliases": [
+    "ti64",
+    "ti-6al-4v",
+    "titanium",
+    "grade 5",
+    "3.7165",
+    "3.7164",
+    "r56400"
+   ],
+   "iso_group": "S",
+   "group": "titanium",
+   "hardness_hb": 334,
+   "machinability_pct": 22,
+   "kc11_n_mm2": 1450,
+   "mc": 0.23,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 60,
+     "mill_finish": 80,
+     "drill": 40,
+     "ream": 15,
+     "thread_mill": 50,
+     "tap": 8,
+     "face": 66
+    },
+    "HSS": {
+     "mill_rough": 12,
+     "mill_finish": 14,
+     "drill": 8,
+     "ream": 4,
+     "tap": 4
+    }
+   },
+   "coolant": "flood, high pressure",
+   "min_feature_mm": 2.0,
+   "max_hole_depth_ratio": 3.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.5,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Low thermal conductivity: light radial engagement, constant chip load, sharp AlCrN/TiAlN carbide."
+  },
+  {
+   "id": "IN718",
+   "name": "Nickel alloy Inconel 718 (2.4668)",
+   "aliases": [
+    "inconel 718",
+    "in718",
+    "inconel",
+    "2.4668",
+    "nicr19fe19nb5mo3",
+    "n07718",
+    "superalloy"
+   ],
+   "iso_group": "S",
+   "group": "superalloy",
+   "hardness_hb": 380,
+   "machinability_pct": 12,
+   "kc11_n_mm2": 2800,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 30,
+     "mill_finish": 40,
+     "drill": 20,
+     "ream": 8,
+     "thread_mill": 25,
+     "tap": 4,
+     "face": 33
+    },
+    "HSS": {
+     "mill_rough": 5,
+     "mill_finish": 6,
+     "drill": 4,
+     "ream": 2,
+     "tap": 2
+    }
+   },
+   "coolant": "flood, high pressure",
+   "min_feature_mm": 2.0,
+   "max_hole_depth_ratio": 3.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 1.5,
+   "surface_finish_ra_um": 3.2,
+   "notes": "Heat-resistant superalloy: ceramic or AlTiN carbide, trochoidal roughing, thread milling instead of tapping."
+  },
+  {
+   "id": "HARD50",
+   "name": "Hardened tool steel (e.g. 1.2379 / AISI D2 or 42CrMo4) 48-55 HRC",
+   "aliases": [
+    "hardened steel",
+    "1.2379",
+    "d2",
+    "aisi d2",
+    "x153crmov12",
+    "55 hrc",
+    "hrc50",
+    "tool steel hardened"
+   ],
+   "iso_group": "H",
+   "group": "hardened steel",
+   "hardness_hb": 520,
+   "machinability_pct": 10,
+   "kc11_n_mm2": 3000,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 90,
+     "mill_finish": 120,
+     "drill": 30,
+     "ream": 15,
+     "thread_mill": 50,
+     "tap": 8,
+     "face": 99
+    },
+    "HSS": {
+     "mill_rough": 0,
+     "mill_finish": 0,
+     "drill": 0,
+     "ream": 0,
+     "tap": 0
+    }
+   },
+   "coolant": "air blast or MQL",
+   "min_feature_mm": 2.0,
+   "max_hole_depth_ratio": 2.5,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 1.5,
+   "surface_finish_ra_um": 0.8,
+   "notes": "Hard milling: small ae, AlTiN/TiSiN carbide, no HSS, threads by thread milling only.",
+   "hardness_hrc": 52
+  },
+  {
+   "id": "BRASS-C360",
+   "name": "Free-cutting brass CuZn39Pb3 (CW614N) / C36000",
+   "aliases": [
+    "brass",
+    "c360",
+    "c36000",
+    "cuzn39pb3",
+    "cw614n",
+    "ms58",
+    "cuzn36pb3",
+    "c38500"
+   ],
+   "iso_group": "N",
+   "group": "copper alloy",
+   "hardness_hb": 100,
+   "machinability_pct": 100,
+   "kc11_n_mm2": 700,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 300,
+     "mill_finish": 350,
+     "drill": 150,
+     "ream": 60,
+     "thread_mill": 200,
+     "tap": 60,
+     "face": 330
+    },
+    "HSS": {
+     "mill_rough": 90,
+     "mill_finish": 108,
+     "drill": 60,
+     "ream": 25,
+     "tap": 30
+    }
+   },
+   "coolant": "dry or mist",
+   "min_feature_mm": 0.8,
+   "max_hole_depth_ratio": 6.0,
+   "thread_engagement_x_d": 1.2,
+   "min_fillet_radius_mm": 0.3,
+   "surface_finish_ra_um": 0.8,
+   "notes": "Reference free-machining material; 0 deg rake drills avoid grabbing."
+  },
+  {
+   "id": "CU-ETP",
+   "name": "Copper Cu-ETP (CW004A) / C11000",
+   "aliases": [
+    "copper",
+    "cu-etp",
+    "cw004a",
+    "c11000",
+    "e-cu"
+   ],
+   "iso_group": "N",
+   "group": "copper alloy",
+   "hardness_hb": 60,
+   "machinability_pct": 20,
+   "kc11_n_mm2": 1000,
+   "mc": 0.25,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 250,
+     "mill_finish": 300,
+     "drill": 100,
+     "ream": 40,
+     "thread_mill": 150,
+     "tap": 30,
+     "face": 275
+    },
+    "HSS": {
+     "mill_rough": 60,
+     "mill_finish": 72,
+     "drill": 40,
+     "ream": 15,
+     "tap": 15
+    }
+   },
+   "coolant": "flood",
+   "min_feature_mm": 1.0,
+   "max_hole_depth_ratio": 4.0,
+   "thread_engagement_x_d": 1.5,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Gummy, long chips: sharp polished tools, high rake."
+  },
+  {
+   "id": "POM",
+   "name": "POM-C acetal (Delrin)",
+   "aliases": [
+    "delrin",
+    "acetal",
+    "pom-c",
+    "pom",
+    "polyoxymethylene",
+    "plastic"
+   ],
+   "iso_group": "N",
+   "group": "polymer",
+   "hardness_hb": 20,
+   "machinability_pct": 120,
+   "kc11_n_mm2": 300,
+   "mc": 0.2,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 400,
+     "mill_finish": 500,
+     "drill": 150,
+     "ream": 60,
+     "thread_mill": 200,
+     "tap": 60,
+     "face": 440
+    },
+    "HSS": {
+     "mill_rough": 200,
+     "mill_finish": 240,
+     "drill": 80,
+     "ream": 30,
+     "tap": 30
+    }
+   },
+   "coolant": "air blast",
+   "min_feature_mm": 0.8,
+   "max_hole_depth_ratio": 6.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Sharp single/dual flute tools, avoid heat build-up; clamp lightly to avoid distortion."
+  },
+  {
+   "id": "PEEK",
+   "name": "PEEK (unfilled)",
+   "aliases": [
+    "peek",
+    "polyetheretherketone"
+   ],
+   "iso_group": "N",
+   "group": "polymer",
+   "hardness_hb": 30,
+   "machinability_pct": 80,
+   "kc11_n_mm2": 400,
+   "mc": 0.2,
+   "cutting_speed_m_min": {
+    "carbide": {
+     "mill_rough": 250,
+     "mill_finish": 300,
+     "drill": 100,
+     "ream": 40,
+     "thread_mill": 150,
+     "tap": 40,
+     "face": 275
+    },
+    "HSS": {
+     "mill_rough": 120,
+     "mill_finish": 144,
+     "drill": 60,
+     "ream": 20,
+     "tap": 20
+    }
+   },
+   "coolant": "air blast",
+   "min_feature_mm": 0.8,
+   "max_hole_depth_ratio": 5.0,
+   "thread_engagement_x_d": 2.0,
+   "min_fillet_radius_mm": 0.5,
+   "surface_finish_ra_um": 1.6,
+   "notes": "Low thermal conductivity; anneal before precision machining."
+  }
+ ],
+ "iso_groups": {
+  "P": {
+   "name": "steel",
+   "fz_mill_k": 0.006,
+   "fz_face": 0.15,
+   "f_drill_k": 0.02,
+   "f_ream": 0.25,
+   "fz_thread_mill": 0.04,
+   "coolant_mode": "Flood"
+  },
+  "M": {
+   "name": "stainless steel",
+   "fz_mill_k": 0.005,
+   "fz_face": 0.12,
+   "f_drill_k": 0.015,
+   "f_ream": 0.2,
+   "fz_thread_mill": 0.03,
+   "coolant_mode": "Flood"
+  },
+  "K": {
+   "name": "cast iron",
+   "fz_mill_k": 0.007,
+   "fz_face": 0.18,
+   "f_drill_k": 0.025,
+   "f_ream": 0.3,
+   "fz_thread_mill": 0.05,
+   "coolant_mode": "None"
+  },
+  "N": {
+   "name": "non-ferrous / plastics",
+   "fz_mill_k": 0.01,
+   "fz_face": 0.15,
+   "f_drill_k": 0.03,
+   "f_ream": 0.35,
+   "fz_thread_mill": 0.06,
+   "coolant_mode": "Flood"
+  },
+  "S": {
+   "name": "heat-resistant superalloys / titanium",
+   "fz_mill_k": 0.004,
+   "fz_face": 0.1,
+   "f_drill_k": 0.012,
+   "f_ream": 0.15,
+   "fz_thread_mill": 0.02,
+   "coolant_mode": "Flood"
+  },
+  "H": {
+   "name": "hardened steel",
+   "fz_mill_k": 0.003,
+   "fz_face": 0.08,
+   "f_drill_k": 0.01,
+   "f_ream": 0.1,
+   "fz_thread_mill": 0.02,
+   "coolant_mode": "Mist"
+  }
+ },
+ "engagement": {
+  "adaptive": {
+   "P": [
+    1.5,
+    0.1
+   ],
+   "M": [
+    1.0,
+    0.08
+   ],
+   "K": [
+    1.5,
+    0.12
+   ],
+   "N": [
+    2.0,
+    0.15
+   ],
+   "S": [
+    1.0,
+    0.07
+   ],
+   "H": [
+    0.8,
+    0.05
+   ]
+  },
+  "rough": {
+   "P": [
+    0.5,
+    0.4
+   ],
+   "M": [
+    0.3,
+    0.3
+   ],
+   "K": [
+    0.5,
+    0.4
+   ],
+   "N": [
+    1.0,
+    0.5
+   ],
+   "S": [
+    0.25,
+    0.25
+   ],
+   "H": [
+    0.1,
+    0.15
+   ]
+  },
+  "slot": {
+   "P": [
+    0.3,
+    1.0
+   ],
+   "M": [
+    0.2,
+    1.0
+   ],
+   "K": [
+    0.3,
+    1.0
+   ],
+   "N": [
+    0.5,
+    1.0
+   ],
+   "S": [
+    0.15,
+    1.0
+   ],
+   "H": [
+    0.05,
+    1.0
+   ]
+  },
+  "finish": {
+   "P": [
+    1.0,
+    0.05
+   ],
+   "M": [
+    1.0,
+    0.04
+   ],
+   "K": [
+    1.0,
+    0.05
+   ],
+   "N": [
+    1.0,
+    0.06
+   ],
+   "S": [
+    1.0,
+    0.03
+   ],
+   "H": [
+    1.0,
+    0.02
+   ]
+  },
+  "face": {
+   "P": [
+    2.0,
+    0.7
+   ],
+   "M": [
+    1.5,
+    0.7
+   ],
+   "K": [
+    2.5,
+    0.7
+   ],
+   "N": [
+    3.0,
+    0.7
+   ],
+   "S": [
+    1.0,
+    0.65
+   ],
+   "H": [
+    0.3,
+    0.6
+   ]
+  }
+ },
+ "finish_allowance_mm": {
+  "wall": 0.3,
+  "floor": 0.2,
+  "small_tool_wall": 0.15,
+  "small_tool_d_mm": 4.0
+ },
+ "chip_thinning": {
+  "max_factor": 2.5
+ },
+ "long_reach": {
+  "l_over_d": 5.0,
+  "vc_factor": 0.8,
+  "fz_factor": 0.7,
+  "ap_factor": 0.5
+ }
+}

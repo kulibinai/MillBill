@@ -1,0 +1,27 @@
+{
+ "_source": "machine_profile",
+ "_comment": "Generic 3-axis vertical machining centre (BT40/SK40). Edit to match the real machine; the cutting-data model clamps to these limits.",
+ "name": "Generic VMC 3-axis, BT40",
+ "max_rpm": 12000,
+ "max_feed_mm_min": 10000,
+ "rapid_mm_min": 24000,
+ "spindle_power_kw": 11.0,
+ "spindle_torque_nm": 70.0,
+ "efficiency": 0.8,
+ "tool_change_s": 5.0,
+ "tap_max_rpm": 3000,
+ "max_tool_length_mm": 200,
+ "travel_mm": [
+  600,
+  400,
+  450
+ ],
+ "coolant": [
+  "Flood",
+  "Mist",
+  "None"
+ ],
+ "rigid_tapping": true,
+ "axes": "XYZ",
+ "indexing": "manual re-clamping between setups (or 3+2 with a 4th/5th axis table)"
+}

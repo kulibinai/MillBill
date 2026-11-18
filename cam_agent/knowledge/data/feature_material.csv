@@ -1,0 +1,56 @@
+feature_type,material_group,compatibility,machinability_score,recommended_coating,recommended_tool_material,notes
+hole,aluminum,good,0.9,uncoated or ZrN,carbide,Polished flutes; avoid TiAlN (aluminium affinity)
+hole,stainless,fair,0.5,TiAlN,carbide,Peck drill; high-pressure coolant
+hole,steel,good,0.7,TiN or TiAlN,carbide or HSS-Co,Standard 118-135 deg point
+hole,titanium,poor,0.3,TiAlN or AlCrN,carbide,Low speed; through-coolant; sharp point
+hole,copper alloy,good,1.0,uncoated,HSS or carbide,Free machining; dry ok
+hole,polymer,good,1.0,uncoated,HSS,Sharp geometry; low heat
+thread,aluminum,good,0.85,uncoated or TiCN,HSS-E or carbide,Spiral flute tap for blind holes
+thread,stainless,poor,0.4,TiCN or TiAlN,HSS-E-PM,Thread milling preferred >= M10; 55-65% thread
+thread,steel,good,0.65,TiN,HSS-E,Standard 75% thread
+thread,titanium,poor,0.25,TiAlN,HSS-E-PM or carbide thread mill,Thread milling strongly preferred
+thread,copper alloy,good,0.95,uncoated,HSS,Straight flute tap
+thread,polymer,good,0.9,uncoated,HSS,Use thread insert for load-bearing threads
+pocket,aluminum,good,0.9,ZrN or uncoated,carbide,2-3 flute; high MRR adaptive clearing
+pocket,stainless,fair,0.45,TiAlN,carbide,4-5 flute; trochoidal; constant engagement
+pocket,steel,good,0.7,TiAlN,carbide,4 flute; roughing plus finishing pass
+pocket,titanium,poor,0.3,TiAlN or AlCrN,carbide,Light radial engagement (10% D) high axial
+pocket,copper alloy,good,1.0,uncoated,carbide,Standard
+pocket,polymer,good,1.0,uncoated,carbide or HSS,Single flute O-flute
+slot,aluminum,good,0.85,ZrN,carbide,Prefer width > tool D (avoid full slotting)
+slot,stainless,fair,0.4,TiAlN,carbide,Trochoidal slotting
+slot,steel,good,0.65,TiAlN,carbide,Multiple depth passes
+slot,titanium,poor,0.25,TiAlN,carbide,Trochoidal only
+planar_face,aluminum,good,0.95,PCD or uncoated,carbide insert face mill,High speed; wiper inserts for finish
+planar_face,stainless,fair,0.5,TiAlN,carbide insert face mill,Positive rake inserts
+planar_face,steel,good,0.7,TiAlN,carbide insert face mill,Standard
+planar_face,titanium,poor,0.3,TiAlN,carbide insert face mill,Low speed; flood
+planar_face,copper alloy,good,1.0,uncoated,carbide,Standard
+planar_face,polymer,good,1.0,uncoated,carbide,Standard
+chamfer,aluminum,good,0.9,uncoated,carbide chamfer mill,Standard
+chamfer,stainless,fair,0.5,TiAlN,carbide chamfer mill,Standard
+chamfer,steel,good,0.7,TiAlN,carbide chamfer mill,Standard
+chamfer,titanium,poor,0.3,TiAlN,carbide chamfer mill,Standard
+fillet,aluminum,good,0.9,uncoated,carbide ball endmill,Standard
+fillet,steel,good,0.7,TiAlN,carbide ball endmill,Standard
+fillet,stainless,fair,0.5,TiAlN,carbide ball endmill,Standard
+boss,aluminum,good,0.9,ZrN,carbide endmill,Profile with climb milling
+boss,steel,good,0.7,TiAlN,carbide endmill,Profile with climb milling
+boss,stainless,fair,0.5,TiAlN,carbide endmill,Profile; leave 0.2 mm finish stock
+step,aluminum,good,0.9,ZrN,carbide endmill,Standard
+step,steel,good,0.7,TiAlN,carbide endmill,Standard
+step,stainless,fair,0.5,TiAlN,carbide endmill,Standard
+hole,cast iron,good,0.7,TiAlN,carbide,Dry or air blast; 140 deg carbide drill; short chips
+thread,cast iron,good,0.7,TiCN,carbide or HSS-E,Straight-flute or carbide taps; dry
+pocket,cast iron,good,0.7,TiAlN,carbide,Dry; climb milling; dust extraction for grey iron
+planar_face,cast iron,good,0.8,PVD/CVD,carbide,Face mill with positive inserts; enter off-centre
+hole,superalloy,poor,0.15,AlCrN,carbide,Through-coolant; low speed; avoid dwell
+thread,superalloy,poor,0.15,AlTiN,carbide thread mill,Thread milling instead of tapping
+pocket,superalloy,poor,0.15,AlCrN,carbide,Trochoidal roughing ae 5-8 %; high-pressure coolant
+planar_face,superalloy,poor,0.2,PVD,carbide or ceramic,Light ap; ceramic inserts for roughing
+hole,hardened steel,poor,0.1,AlTiN,carbide,Drill before hardening where possible; otherwise carbide drill for hard materials
+thread,hardened steel,poor,0.1,AlTiN,carbide thread mill,Thread milling only
+pocket,hardened steel,fair,0.2,AlTiN/TiSiN,carbide,Small ae (2-5 %); air blast
+planar_face,hardened steel,fair,0.3,CBN or PVD,carbide,Light ap 0.1-0.3 mm
+chamfer,cast iron,good,0.7,TiAlN,carbide,Dry
+slot,cast iron,good,0.7,TiAlN,carbide,Dry; avoid full-width slotting

@@ -1,0 +1,306 @@
+{
+ "_source": "dependency_rules",
+ "_comment": "Hard ordering constraints of the route. 'global_precedence': every step of a 'before' process precedes every step of an 'after' process (whatever the feature); tokens are a process name, '@group' (process_groups), '@cutting' (every tooling process outside the final group, grinding included), '@machining' (@cutting without grinding: on-machine) or '*'. 'precedence': [before, after] for steps of the SAME feature. 'requires': a process needs the other one on the same feature. The order among unconstrained steps comes from the process phases (process_templates.json).",
+ "_standards": "Route principles of GOST 3.1109 / ESTD and standard CAPP practice: (1) the datum surfaces are machined first; (2) surfaces with the largest stock next: roughing of all features before finishing (stages separated, so that residual stress, heat and clamping deformation are released before the final cuts); (3) heat treatment between roughing and finishing: fixing holes and tapped threads before hardening, finishing, reaming, boring and grinding after it; (4) holes after the faces and floors they start from; (5) the most accurate surfaces last; (6) auxiliary operations (entry chamfers, countersinks) before threads and precision bores of the same hole; (7) deburring after all material removal (ISO 13715); cleaning, inspection and coating off the machine, coating after inspection.",
+ "process_groups": {
+  "datum": [
+   "facing"
+  ],
+  "roughing": [
+   "cavity_roughing",
+   "profile_milling",
+   "pocket_milling",
+   "slot_milling",
+   "step_milling"
+  ],
+  "finishing": [
+   "surface_finishing",
+   "profile_finishing",
+   "pocket_finishing",
+   "slot_finishing",
+   "fillet_milling"
+  ],
+  "hole_making": [
+   "spot_drilling",
+   "drilling",
+   "counterboring",
+   "countersinking",
+   "reaming",
+   "boring",
+   "tapping",
+   "thread_milling"
+  ],
+  "before_heat_treatment": [
+   "cavity_roughing",
+   "profile_milling",
+   "pocket_milling",
+   "slot_milling",
+   "step_milling",
+   "spot_drilling",
+   "drilling",
+   "counterboring",
+   "countersinking",
+   "tapping"
+  ],
+  "after_heat_treatment": [
+   "surface_finishing",
+   "profile_finishing",
+   "pocket_finishing",
+   "slot_finishing",
+   "fillet_milling",
+   "reaming",
+   "boring",
+   "grinding"
+  ],
+  "final": [
+   "deburring",
+   "cleaning",
+   "inspection",
+   "coating"
+  ]
+ },
+ "global_precedence": [
+  {
+   "before": "setup",
+   "after": "*",
+   "reason": "clamping and work offset first"
+  },
+  {
+   "before": "@datum",
+   "after": "@machining",
+   "reason": "datum surfaces are machined first (GOST 3.1109)"
+  },
+  {
+   "before": "@roughing",
+   "after": "@finishing",
+   "reason": "all roughing before any finishing (stages separated)"
+  },
+  {
+   "before": "@roughing",
+   "after": "@hole_making",
+   "reason": "holes after milling of the faces and floors they start from"
+  },
+  {
+   "before": "@before_heat_treatment",
+   "after": "heat_treatment",
+   "reason": "roughing, fixing holes and tapped threads before hardening"
+  },
+  {
+   "before": "heat_treatment",
+   "after": "@after_heat_treatment",
+   "reason": "finishing, reaming, boring and grinding after heat treatment (distortion, hardness)"
+  },
+  {
+   "before": "@cutting",
+   "after": "deburring",
+   "reason": "deburring after all material removal (ISO 13715)"
+  },
+  {
+   "before": "heat_treatment",
+   "after": "deburring",
+   "reason": "deburring after heat treatment (scale, raised edges)"
+  },
+  {
+   "before": "deburring",
+   "after": "cleaning",
+   "reason": "cleaning after deburring"
+  },
+  {
+   "before": "@cutting",
+   "after": "cleaning",
+   "reason": "cleaning after all material removal"
+  },
+  {
+   "before": "heat_treatment",
+   "after": "cleaning",
+   "reason": "cleaning after heat treatment"
+  },
+  {
+   "before": "cleaning",
+   "after": "inspection",
+   "reason": "inspection of a clean part"
+  },
+  {
+   "before": "@cutting",
+   "after": "inspection",
+   "reason": "final inspection after all material removal"
+  },
+  {
+   "before": "heat_treatment",
+   "after": "inspection",
+   "reason": "final inspection after heat treatment"
+  },
+  {
+   "before": "inspection",
+   "after": "coating",
+   "reason": "coating after the dimensional inspection"
+  },
+  {
+   "before": "@cutting",
+   "after": "coating",
+   "reason": "no material removal after coating"
+  },
+  {
+   "before": "heat_treatment",
+   "after": "coating",
+   "reason": "heat treatment destroys a coating"
+  }
+ ],
+ "precedence": [
+  [
+   "spot_drilling",
+   "drilling"
+  ],
+  [
+   "drilling",
+   "reaming"
+  ],
+  [
+   "drilling",
+   "boring"
+  ],
+  [
+   "drilling",
+   "tapping"
+  ],
+  [
+   "drilling",
+   "thread_milling"
+  ],
+  [
+   "drilling",
+   "counterboring"
+  ],
+  [
+   "drilling",
+   "countersinking"
+  ],
+  [
+   "countersinking",
+   "tapping"
+  ],
+  [
+   "countersinking",
+   "thread_milling"
+  ],
+  [
+   "countersinking",
+   "reaming"
+  ],
+  [
+   "countersinking",
+   "boring"
+  ],
+  [
+   "chamfering",
+   "tapping"
+  ],
+  [
+   "chamfering",
+   "thread_milling"
+  ],
+  [
+   "chamfering",
+   "reaming"
+  ],
+  [
+   "chamfering",
+   "boring"
+  ],
+  [
+   "pocket_milling",
+   "pocket_finishing"
+  ],
+  [
+   "slot_milling",
+   "slot_finishing"
+  ],
+  [
+   "profile_milling",
+   "profile_finishing"
+  ],
+  [
+   "cavity_roughing",
+   "surface_finishing"
+  ]
+ ],
+ "requires": {
+  "tapping": [
+   "drilling"
+  ],
+  "reaming": [
+   "drilling"
+  ],
+  "boring": [
+   "drilling"
+  ],
+  "thread_milling": [
+   "drilling"
+  ],
+  "counterboring": [
+   "drilling"
+  ],
+  "countersinking": [
+   "drilling"
+  ],
+  "pocket_finishing": [
+   "pocket_milling"
+  ],
+  "slot_finishing": [
+   "slot_milling"
+  ],
+  "profile_finishing": [
+   "profile_milling"
+  ],
+  "surface_finishing": [
+   "cavity_roughing"
+  ]
+ },
+ "invalid_combinations": [
+  {
+   "first": "coating",
+   "later": "*machining*",
+   "message": "Machining after coating/plating damages the coating"
+  },
+  {
+   "first": "coating",
+   "later": "heat_treatment",
+   "message": "Heat treatment after coating/plating destroys the coating"
+  },
+  {
+   "first": "inspection",
+   "later": "*machining*",
+   "message": "Final inspection must follow all machining"
+  },
+  {
+   "first": "grinding",
+   "later": "heat_treatment",
+   "message": "Grinding must follow heat treatment (distortion)"
+  }
+ ],
+ "mandatory_final": [
+  "deburring",
+  "cleaning",
+  "inspection"
+ ],
+ "base_confidence": {
+  "user_override": 0.95,
+  "design_specified": 0.85,
+  "generated": 0.7
+ },
+ "nesting": {
+  "_comment": "A pocket/slot (container) that a deeper pocket, slot or hole opens from is roughed before the inner feature is roughed or drilled; the inner feature then starts at the container floor.",
+  "container_types": [
+   "pocket",
+   "slot",
+   "step"
+  ],
+  "inner_types": [
+   "pocket",
+   "slot",
+   "hole"
+  ],
+  "min_overlap_mm2": 1.0
+ },
+ "tight_corner_ratio": 0.1
+}

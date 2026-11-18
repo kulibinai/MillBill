@@ -1,0 +1,834 @@
+{
+ "_source": "sql_database",
+ "_comment": "Quantitative constraints loaded into an in-memory SQLite table 'rules'. material_group '*' applies to all; groups: aluminum, steel, stainless, cast iron, titanium, superalloy, hardened steel, copper alloy, polymer.",
+ "rules": [
+  {
+   "rule_id": "H-001",
+   "feature_type": "hole",
+   "material_group": "*",
+   "parameter": "diameter",
+   "min_value": 1.0,
+   "max_value": 100.0,
+   "unit": "mm",
+   "severity": "critical",
+   "standard": "shop capability",
+   "message": "Drilled/bored holes between 1 mm and 100 mm with the available tooling."
+  },
+  {
+   "rule_id": "H-002",
+   "feature_type": "hole",
+   "material_group": "aluminum",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 8.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 8xD in aluminium needs a long drill, pecking and through-coolant."
+  },
+  {
+   "rule_id": "H-003",
+   "feature_type": "hole",
+   "material_group": "steel",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 5.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 5xD in steel: 8xD carbide drill with through-coolant or peck cycle."
+  },
+  {
+   "rule_id": "H-004",
+   "feature_type": "hole",
+   "material_group": "stainless",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 3.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 3xD in stainless: parabolic-flute drill, peck cycle, high-pressure coolant."
+  },
+  {
+   "rule_id": "H-005",
+   "feature_type": "hole",
+   "material_group": "titanium",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 3.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 3xD in titanium: through-coolant carbide drill; above 10xD gun drilling."
+  },
+  {
+   "rule_id": "H-006",
+   "feature_type": "hole",
+   "material_group": "superalloy",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 3.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 3xD in nickel alloys: through-coolant carbide drill, low feed."
+  },
+  {
+   "rule_id": "H-007",
+   "feature_type": "hole",
+   "material_group": "cast iron",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 6.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Above 6xD in cast iron: peck for chip evacuation."
+  },
+  {
+   "rule_id": "H-008",
+   "feature_type": "hole",
+   "material_group": "hardened steel",
+   "parameter": "depth_to_diameter",
+   "min_value": 0,
+   "max_value": 2.5,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Holes in hardened steel above 2.5xD: drill before hardening or EDM."
+  },
+  {
+   "rule_id": "H-010",
+   "feature_type": "hole",
+   "material_group": "*",
+   "parameter": "tolerance_it_grade",
+   "min_value": 6,
+   "max_value": 13,
+   "unit": "IT",
+   "severity": "warning",
+   "standard": "ISO 286-1",
+   "message": "Drilling holds IT10-IT12; reaming IT7-IT8; boring IT6-IT7. Tighter grades need grinding/honing."
+  },
+  {
+   "rule_id": "H-011",
+   "feature_type": "hole",
+   "material_group": "*",
+   "parameter": "min_wall_thickness",
+   "min_value": 1.5,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Wall between a hole and an edge >= 1.5 mm (>= 0.5xD preferred)."
+  },
+  {
+   "rule_id": "T-001",
+   "feature_type": "thread",
+   "material_group": "*",
+   "parameter": "thread_engagement_x_d",
+   "min_value": 1.0,
+   "max_value": 3.0,
+   "unit": "xD",
+   "severity": "warning",
+   "standard": "ISO 965 / VDI 2230",
+   "message": "Engagement 1.0xD steel, 1.5xD cast iron, 2xD aluminium/soft materials; > 3xD adds nothing."
+  },
+  {
+   "rule_id": "T-002",
+   "feature_type": "thread",
+   "material_group": "*",
+   "parameter": "tap_drill_clearance_x_pitch",
+   "min_value": 0.5,
+   "max_value": 1.2,
+   "unit": "x pitch",
+   "severity": "critical",
+   "standard": "ISO 2306",
+   "message": "Tap drill = nominal - pitch (about 75 % thread height)."
+  },
+  {
+   "rule_id": "T-004",
+   "feature_type": "thread",
+   "material_group": "*",
+   "parameter": "blind_bottom_clearance_x_pitch",
+   "min_value": 2.0,
+   "max_value": 1000000000.0,
+   "unit": "x pitch",
+   "severity": "warning",
+   "standard": "DIN 76-1",
+   "message": "Blind tapped hole: drill at least 2-3 pitches deeper than the full thread (thread run-out)."
+  },
+  {
+   "rule_id": "P-001",
+   "feature_type": "pocket",
+   "material_group": "*",
+   "parameter": "corner_radius",
+   "min_value": 0.5,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "critical",
+   "standard": "DFM guideline",
+   "message": "Internal vertical corners need a radius (>= smallest endmill radius); sharp corners need EDM."
+  },
+  {
+   "rule_id": "P-002",
+   "feature_type": "pocket",
+   "material_group": "*",
+   "parameter": "depth_to_width",
+   "min_value": 0,
+   "max_value": 4.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Pocket depth > 4x narrowest width: long-reach tools, reduced ap/ae."
+  },
+  {
+   "rule_id": "P-003",
+   "feature_type": "pocket",
+   "material_group": "*",
+   "parameter": "min_width",
+   "min_value": 1.0,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "critical",
+   "standard": "shop capability",
+   "message": "Narrowest pocket width must exceed the smallest endmill (2 mm in the library)."
+  },
+  {
+   "rule_id": "P-004",
+   "feature_type": "pocket",
+   "material_group": "*",
+   "parameter": "corner_radius_to_depth",
+   "min_value": 0.1,
+   "max_value": 1000000000.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Corner radius >= 1/10 of the pocket depth (tool stick-out <= 5xD)."
+  },
+  {
+   "rule_id": "S-001",
+   "feature_type": "slot",
+   "material_group": "*",
+   "parameter": "width",
+   "min_value": 1.0,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "critical",
+   "standard": "shop capability",
+   "message": "Slot width must exceed the smallest available endmill."
+  },
+  {
+   "rule_id": "S-002",
+   "feature_type": "slot",
+   "material_group": "*",
+   "parameter": "depth_to_width",
+   "min_value": 0,
+   "max_value": 3.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Slots deeper than 3x width: several depth passes, trochoidal milling."
+  },
+  {
+   "rule_id": "F-001",
+   "feature_type": "planar_face",
+   "material_group": "*",
+   "parameter": "flatness",
+   "min_value": 0.02,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "ISO 1101",
+   "message": "Face milling holds about 0.02 mm flatness per 100 mm; tighter needs grinding or lapping."
+  },
+  {
+   "rule_id": "F-002",
+   "feature_type": "planar_face",
+   "material_group": "*",
+   "parameter": "surface_finish_ra",
+   "min_value": 0.4,
+   "max_value": 1000000000.0,
+   "unit": "um",
+   "severity": "warning",
+   "standard": "ISO 21920-2",
+   "message": "Milling reaches Ra 0.4-3.2 um (fine finishing); below 0.4 um needs grinding/polishing."
+  },
+  {
+   "rule_id": "C-001",
+   "feature_type": "chamfer",
+   "material_group": "*",
+   "parameter": "size",
+   "min_value": 0.1,
+   "max_value": 10.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "ISO 13715",
+   "message": "Chamfers 0.1-10 mm with a 90 deg chamfer mill; larger by profiling. Undefined edges: break 0.1-0.3 mm (ISO 13715)."
+  },
+  {
+   "rule_id": "R-001",
+   "feature_type": "fillet",
+   "material_group": "*",
+   "parameter": "radius",
+   "min_value": 0.3,
+   "max_value": 25.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "shop capability",
+   "message": "External fillets with ball or corner-radius endmills 0.3-25 mm."
+  },
+  {
+   "rule_id": "B-001",
+   "feature_type": "boss",
+   "material_group": "*",
+   "parameter": "height_to_diameter",
+   "min_value": 0,
+   "max_value": 4.0,
+   "unit": "ratio",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Tall bosses (> 4x diameter) deflect during profiling."
+  },
+  {
+   "rule_id": "G-001",
+   "feature_type": "*",
+   "material_group": "*",
+   "parameter": "min_wall_thickness",
+   "min_value": 0.8,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "DFM guideline",
+   "message": "Metal walls thinner than 0.8-1 mm chatter and deflect (plastics: 1.5 mm)."
+  },
+  {
+   "rule_id": "G-002",
+   "feature_type": "*",
+   "material_group": "*",
+   "parameter": "general_tolerance",
+   "min_value": 0.05,
+   "max_value": 1000000000.0,
+   "unit": "mm",
+   "severity": "warning",
+   "standard": "ISO 2768-1",
+   "message": "ISO 2768-m: +-0.1 (0.5-6 mm), +-0.2 (6-30), +-0.3 (30-120), +-0.5 (120-400), +-0.8 (400-1000); class f is half of m."
+  }
+ ],
+ "thread_specs": [
+  {
+   "thread": "M2",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 2,
+   "pitch": 0.4,
+   "tap_drill_mm": 1.6,
+   "clearance_drill_mm": 2.4,
+   "minor_mm": 1.567
+  },
+  {
+   "thread": "M2.5",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 2.5,
+   "pitch": 0.45,
+   "tap_drill_mm": 2.05,
+   "clearance_drill_mm": 2.9,
+   "minor_mm": 2.013
+  },
+  {
+   "thread": "M3",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 3,
+   "pitch": 0.5,
+   "tap_drill_mm": 2.5,
+   "clearance_drill_mm": 3.4,
+   "minor_mm": 2.459
+  },
+  {
+   "thread": "M4",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 4,
+   "pitch": 0.7,
+   "tap_drill_mm": 3.3,
+   "clearance_drill_mm": 4.5,
+   "minor_mm": 3.242
+  },
+  {
+   "thread": "M5",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 5,
+   "pitch": 0.8,
+   "tap_drill_mm": 4.2,
+   "clearance_drill_mm": 5.5,
+   "minor_mm": 4.134
+  },
+  {
+   "thread": "M6",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 6,
+   "pitch": 1.0,
+   "tap_drill_mm": 5.0,
+   "clearance_drill_mm": 6.6,
+   "minor_mm": 4.918
+  },
+  {
+   "thread": "M8",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 8,
+   "pitch": 1.25,
+   "tap_drill_mm": 6.8,
+   "clearance_drill_mm": 9.0,
+   "minor_mm": 6.647
+  },
+  {
+   "thread": "M10",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 10,
+   "pitch": 1.5,
+   "tap_drill_mm": 8.5,
+   "clearance_drill_mm": 11.0,
+   "minor_mm": 8.376
+  },
+  {
+   "thread": "M12",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 12,
+   "pitch": 1.75,
+   "tap_drill_mm": 10.2,
+   "clearance_drill_mm": 13.5,
+   "minor_mm": 10.106
+  },
+  {
+   "thread": "M14",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 14,
+   "pitch": 2.0,
+   "tap_drill_mm": 12.0,
+   "clearance_drill_mm": 15.5,
+   "minor_mm": 11.835
+  },
+  {
+   "thread": "M16",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 16,
+   "pitch": 2.0,
+   "tap_drill_mm": 14.0,
+   "clearance_drill_mm": 17.5,
+   "minor_mm": 13.835
+  },
+  {
+   "thread": "M18",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 18,
+   "pitch": 2.5,
+   "tap_drill_mm": 15.5,
+   "clearance_drill_mm": 20.0,
+   "minor_mm": 15.294
+  },
+  {
+   "thread": "M20",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 20,
+   "pitch": 2.5,
+   "tap_drill_mm": 17.5,
+   "clearance_drill_mm": 22.0,
+   "minor_mm": 17.294
+  },
+  {
+   "thread": "M24",
+   "standard": "ISO 261 coarse",
+   "series": "M",
+   "major_mm": 24,
+   "pitch": 3.0,
+   "tap_drill_mm": 21.0,
+   "clearance_drill_mm": 26.0,
+   "minor_mm": 20.753
+  },
+  {
+   "thread": "M8x1",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 8,
+   "pitch": 1.0,
+   "tap_drill_mm": 7.0,
+   "clearance_drill_mm": 9.0,
+   "minor_mm": 6.918
+  },
+  {
+   "thread": "M10x1",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 10,
+   "pitch": 1.0,
+   "tap_drill_mm": 9.0,
+   "clearance_drill_mm": 11.0,
+   "minor_mm": 8.918
+  },
+  {
+   "thread": "M10x1.25",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 10,
+   "pitch": 1.25,
+   "tap_drill_mm": 8.8,
+   "clearance_drill_mm": 11.0,
+   "minor_mm": 8.647
+  },
+  {
+   "thread": "M12x1.25",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 12,
+   "pitch": 1.25,
+   "tap_drill_mm": 10.8,
+   "clearance_drill_mm": 13.5,
+   "minor_mm": 10.647
+  },
+  {
+   "thread": "M12x1.5",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 12,
+   "pitch": 1.5,
+   "tap_drill_mm": 10.5,
+   "clearance_drill_mm": 13.5,
+   "minor_mm": 10.376
+  },
+  {
+   "thread": "M14x1.5",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 14,
+   "pitch": 1.5,
+   "tap_drill_mm": 12.5,
+   "clearance_drill_mm": 15.5,
+   "minor_mm": 12.376
+  },
+  {
+   "thread": "M16x1.5",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 16,
+   "pitch": 1.5,
+   "tap_drill_mm": 14.5,
+   "clearance_drill_mm": 17.5,
+   "minor_mm": 14.376
+  },
+  {
+   "thread": "M20x1.5",
+   "standard": "ISO 261 fine",
+   "series": "MF",
+   "major_mm": 20,
+   "pitch": 1.5,
+   "tap_drill_mm": 18.5,
+   "clearance_drill_mm": 22.0,
+   "minor_mm": 18.376
+  },
+  {
+   "thread": "#4-40 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 2.845,
+   "pitch": 0.635,
+   "tap_drill_mm": 2.26,
+   "clearance_drill_mm": 3.26,
+   "minor_mm": 2.158
+  },
+  {
+   "thread": "#6-32 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 3.505,
+   "pitch": 0.7937,
+   "tap_drill_mm": 2.71,
+   "clearance_drill_mm": 3.8,
+   "minor_mm": 2.646
+  },
+  {
+   "thread": "#8-32 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 4.166,
+   "pitch": 0.7937,
+   "tap_drill_mm": 3.45,
+   "clearance_drill_mm": 4.5,
+   "minor_mm": 3.307
+  },
+  {
+   "thread": "#10-24 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 4.826,
+   "pitch": 1.0583,
+   "tap_drill_mm": 3.8,
+   "clearance_drill_mm": 5.11,
+   "minor_mm": 3.68
+  },
+  {
+   "thread": "1/4-20 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 6.35,
+   "pitch": 1.27,
+   "tap_drill_mm": 5.11,
+   "clearance_drill_mm": 6.76,
+   "minor_mm": 4.975
+  },
+  {
+   "thread": "5/16-18 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 7.938,
+   "pitch": 1.4111,
+   "tap_drill_mm": 6.53,
+   "clearance_drill_mm": 8.43,
+   "minor_mm": 6.41
+  },
+  {
+   "thread": "3/8-16 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 9.525,
+   "pitch": 1.5875,
+   "tap_drill_mm": 7.94,
+   "clearance_drill_mm": 10.08,
+   "minor_mm": 7.807
+  },
+  {
+   "thread": "1/2-13 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 12.7,
+   "pitch": 1.9538,
+   "tap_drill_mm": 10.72,
+   "clearance_drill_mm": 13.49,
+   "minor_mm": 10.585
+  },
+  {
+   "thread": "5/8-11 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 15.875,
+   "pitch": 2.3091,
+   "tap_drill_mm": 13.49,
+   "clearance_drill_mm": 16.67,
+   "minor_mm": 13.375
+  },
+  {
+   "thread": "3/4-10 UNC",
+   "standard": "ASME B1.1 UNC",
+   "series": "UNC",
+   "major_mm": 19.05,
+   "pitch": 2.54,
+   "tap_drill_mm": 16.67,
+   "clearance_drill_mm": 19.84,
+   "minor_mm": 16.3
+  },
+  {
+   "thread": "#10-32 UNF",
+   "standard": "ASME B1.1 UNF",
+   "series": "UNF",
+   "major_mm": 4.826,
+   "pitch": 0.7937,
+   "tap_drill_mm": 4.04,
+   "clearance_drill_mm": 5.11,
+   "minor_mm": 3.967
+  },
+  {
+   "thread": "1/4-28 UNF",
+   "standard": "ASME B1.1 UNF",
+   "series": "UNF",
+   "major_mm": 6.35,
+   "pitch": 0.9071,
+   "tap_drill_mm": 5.41,
+   "clearance_drill_mm": 6.76,
+   "minor_mm": 5.368
+  },
+  {
+   "thread": "5/16-24 UNF",
+   "standard": "ASME B1.1 UNF",
+   "series": "UNF",
+   "major_mm": 7.938,
+   "pitch": 1.0583,
+   "tap_drill_mm": 6.91,
+   "clearance_drill_mm": 8.43,
+   "minor_mm": 6.792
+  },
+  {
+   "thread": "3/8-24 UNF",
+   "standard": "ASME B1.1 UNF",
+   "series": "UNF",
+   "major_mm": 9.525,
+   "pitch": 1.0583,
+   "tap_drill_mm": 8.43,
+   "clearance_drill_mm": 10.08,
+   "minor_mm": 8.379
+  },
+  {
+   "thread": "1/2-20 UNF",
+   "standard": "ASME B1.1 UNF",
+   "series": "UNF",
+   "major_mm": 12.7,
+   "pitch": 1.27,
+   "tap_drill_mm": 11.51,
+   "clearance_drill_mm": 13.49,
+   "minor_mm": 11.325
+  }
+ ],
+ "general_tolerances_iso2768": {
+  "_comment": "ISO 2768-1 permissible deviations for linear dimensions (mm), [upper limit of the nominal range, +-deviation]; None = not specified.",
+  "ranges_mm": [
+   3,
+   6,
+   30,
+   120,
+   400,
+   1000,
+   2000,
+   4000
+  ],
+  "f": [
+   0.05,
+   0.05,
+   0.1,
+   0.15,
+   0.2,
+   0.3,
+   0.5,
+   null
+  ],
+  "m": [
+   0.1,
+   0.1,
+   0.2,
+   0.3,
+   0.5,
+   0.8,
+   1.2,
+   2.0
+  ],
+  "c": [
+   0.2,
+   0.3,
+   0.5,
+   0.8,
+   1.2,
+   2.0,
+   3.0,
+   4.0
+  ],
+  "v": [
+   null,
+   0.5,
+   1.0,
+   1.5,
+   2.5,
+   4.0,
+   6.0,
+   8.0
+  ]
+ },
+ "counterbores": [
+  {
+   "screw": "M3",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 6.5,
+   "through_d_mm": 3.4,
+   "depth_mm": 3.4
+  },
+  {
+   "screw": "M4",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 8.0,
+   "through_d_mm": 4.5,
+   "depth_mm": 4.4
+  },
+  {
+   "screw": "M5",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 10.0,
+   "through_d_mm": 5.5,
+   "depth_mm": 5.4
+  },
+  {
+   "screw": "M6",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 11.0,
+   "through_d_mm": 6.6,
+   "depth_mm": 6.4
+  },
+  {
+   "screw": "M8",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 15.0,
+   "through_d_mm": 9.0,
+   "depth_mm": 8.6
+  },
+  {
+   "screw": "M10",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 18.0,
+   "through_d_mm": 11.0,
+   "depth_mm": 10.6
+  },
+  {
+   "screw": "M12",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 20.0,
+   "through_d_mm": 13.5,
+   "depth_mm": 12.6
+  },
+  {
+   "screw": "M16",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 26.0,
+   "through_d_mm": 17.5,
+   "depth_mm": 16.6
+  },
+  {
+   "screw": "M20",
+   "standard": "DIN 974-1 / ISO 4762",
+   "counterbore_d_mm": 33.0,
+   "through_d_mm": 22.0,
+   "depth_mm": 20.6
+  }
+ ],
+ "reaming_allowance_mm": {
+  "_comment": "VDI 3210 / tool-maker practice: diameter stock left for the reamer",
+  "table": [
+   [
+    5,
+    0.15
+   ],
+   [
+    10,
+    0.2
+   ],
+   [
+    20,
+    0.25
+   ],
+   [
+    50,
+    0.3
+   ],
+   [
+    1000,
+    0.4
+   ]
+  ]
+ },
+ "boring_allowance_mm": 0.6
+}

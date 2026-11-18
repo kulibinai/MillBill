@@ -1,0 +1,2249 @@
+{
+ "_source": "tool_library",
+ "_comment": "Typical job-shop tool crib. 'iso' lists the ISO 513 material groups a tool is rated for. Drill/reamer/boring entries cover a diameter range (any size in diameter_step_mm). freecad_shape is a FreeCAD CAM tool-bit shape; shape_params are its properties (mm, deg). Cutting data are not stored per tool: planning/cutting_data.py derives them from the material group, the tool and the strategy.",
+ "process_to_tool_category": {
+  "facing": [
+   "face_mill",
+   "endmill"
+  ],
+  "pocket_milling": [
+   "endmill"
+  ],
+  "pocket_finishing": [
+   "endmill"
+  ],
+  "slot_milling": [
+   "endmill"
+  ],
+  "slot_finishing": [
+   "endmill"
+  ],
+  "profile_milling": [
+   "endmill"
+  ],
+  "profile_finishing": [
+   "endmill"
+  ],
+  "step_milling": [
+   "endmill"
+  ],
+  "spot_drilling": [
+   "spot_drill"
+  ],
+  "drilling": [
+   "twist_drill"
+  ],
+  "reaming": [
+   "reamer"
+  ],
+  "boring": [
+   "boring_bar"
+  ],
+  "counterboring": [
+   "endmill"
+  ],
+  "countersinking": [
+   "countersink",
+   "chamfer_mill"
+  ],
+  "tapping": [
+   "tap"
+  ],
+  "thread_milling": [
+   "thread_mill"
+  ],
+  "chamfering": [
+   "chamfer_mill"
+  ],
+  "deburring": [
+   "chamfer_mill"
+  ],
+  "fillet_milling": [
+   "ball_endmill"
+  ],
+  "cavity_roughing": [
+   "endmill",
+   "bull_endmill"
+  ],
+  "surface_finishing": [
+   "endmill"
+  ],
+  "grinding": [
+   "grinding_wheel"
+  ]
+ },
+ "non_tooling_processes": [
+  "heat_treatment",
+  "inspection",
+  "cleaning",
+  "coating",
+  "plating",
+  "stress_relief",
+  "marking",
+  "setup",
+  "fixturing"
+ ],
+ "tools": [
+  {
+   "id": "EM2-N3",
+   "category": "endmill",
+   "name": "2 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 2,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 6,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 2,
+    "Length": 50,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 2,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM2-U4",
+   "category": "endmill",
+   "name": "2 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 2,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 6,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 2,
+    "Length": 50,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM3-N3",
+   "category": "endmill",
+   "name": "3 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 3,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 9,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 3,
+    "Length": 50,
+    "CuttingEdgeHeight": 9,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM3-U4",
+   "category": "endmill",
+   "name": "3 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 3,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 9,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 3,
+    "Length": 50,
+    "CuttingEdgeHeight": 9,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM4-N3",
+   "category": "endmill",
+   "name": "4 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 4,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 55,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 55,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM4-U4",
+   "category": "endmill",
+   "name": "4 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 4,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 55,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 55,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM5-N3",
+   "category": "endmill",
+   "name": "5 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 5,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 14,
+   "overall_length_mm": 60,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 5,
+    "Length": 60,
+    "CuttingEdgeHeight": 14,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM5-U4",
+   "category": "endmill",
+   "name": "5 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 5,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 14,
+   "overall_length_mm": 60,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 5,
+    "Length": 60,
+    "CuttingEdgeHeight": 14,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM6-N3",
+   "category": "endmill",
+   "name": "6 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 6,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 16,
+   "overall_length_mm": 60,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 60,
+    "CuttingEdgeHeight": 16,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM6-U4",
+   "category": "endmill",
+   "name": "6 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 6,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 16,
+   "overall_length_mm": 60,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 60,
+    "CuttingEdgeHeight": 16,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM8-N3",
+   "category": "endmill",
+   "name": "8 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 8,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 20,
+   "overall_length_mm": 65,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 65,
+    "CuttingEdgeHeight": 20,
+    "Flutes": 3,
+    "ShankDiameter": 8
+   }
+  },
+  {
+   "id": "EM8-U4",
+   "category": "endmill",
+   "name": "8 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 8,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 20,
+   "overall_length_mm": 65,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 65,
+    "CuttingEdgeHeight": 20,
+    "Flutes": 4,
+    "ShankDiameter": 8
+   }
+  },
+  {
+   "id": "EM10-N3",
+   "category": "endmill",
+   "name": "10 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 10,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 22,
+   "overall_length_mm": 75,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 75,
+    "CuttingEdgeHeight": 22,
+    "Flutes": 3,
+    "ShankDiameter": 10
+   }
+  },
+  {
+   "id": "EM10-U4",
+   "category": "endmill",
+   "name": "10 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 10,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 22,
+   "overall_length_mm": 75,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 75,
+    "CuttingEdgeHeight": 22,
+    "Flutes": 4,
+    "ShankDiameter": 10
+   }
+  },
+  {
+   "id": "EM12-N3",
+   "category": "endmill",
+   "name": "12 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 12,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 26,
+   "overall_length_mm": 80,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 80,
+    "CuttingEdgeHeight": 26,
+    "Flutes": 3,
+    "ShankDiameter": 12
+   }
+  },
+  {
+   "id": "EM12-U4",
+   "category": "endmill",
+   "name": "12 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 12,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 26,
+   "overall_length_mm": 80,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 80,
+    "CuttingEdgeHeight": 26,
+    "Flutes": 4,
+    "ShankDiameter": 12
+   }
+  },
+  {
+   "id": "EM16-N3",
+   "category": "endmill",
+   "name": "16 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 16,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 32,
+   "overall_length_mm": 92,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 16,
+    "Length": 92,
+    "CuttingEdgeHeight": 32,
+    "Flutes": 3,
+    "ShankDiameter": 16
+   }
+  },
+  {
+   "id": "EM16-U4",
+   "category": "endmill",
+   "name": "16 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 16,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 32,
+   "overall_length_mm": 92,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 16,
+    "Length": 92,
+    "CuttingEdgeHeight": 32,
+    "Flutes": 4,
+    "ShankDiameter": 16
+   }
+  },
+  {
+   "id": "EM20-N3",
+   "category": "endmill",
+   "name": "20 mm 3-flute carbide endmill, polished/ZrN (aluminium, copper, plastics)",
+   "diameter_mm": 20,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 38,
+   "overall_length_mm": 104,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 20,
+    "Length": 104,
+    "CuttingEdgeHeight": 38,
+    "Flutes": 3,
+    "ShankDiameter": 20
+   }
+  },
+  {
+   "id": "EM20-U4",
+   "category": "endmill",
+   "name": "20 mm 4-flute carbide endmill, AlTiN (steel, stainless, cast iron, Ti, hardened)",
+   "diameter_mm": 20,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 38,
+   "overall_length_mm": 104,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 20,
+    "Length": 104,
+    "CuttingEdgeHeight": 38,
+    "Flutes": 4,
+    "ShankDiameter": 20
+   }
+  },
+  {
+   "id": "EM4-N3-L",
+   "category": "endmill",
+   "name": "4 mm 3-flute carbide endmill, long series 75 mm (non-ferrous)",
+   "diameter_mm": 4,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 75,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 75,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM4-U4-L",
+   "category": "endmill",
+   "name": "4 mm 4-flute carbide endmill, long series 75 mm, AlTiN",
+   "diameter_mm": 4,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 75,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 75,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM6-N3-L",
+   "category": "endmill",
+   "name": "6 mm 3-flute carbide endmill, long series 100 mm (non-ferrous)",
+   "diameter_mm": 6,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 18,
+   "overall_length_mm": 100,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 100,
+    "CuttingEdgeHeight": 18,
+    "Flutes": 3,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM6-U4-L",
+   "category": "endmill",
+   "name": "6 mm 4-flute carbide endmill, long series 100 mm, AlTiN",
+   "diameter_mm": 6,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 18,
+   "overall_length_mm": 100,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 100,
+    "CuttingEdgeHeight": 18,
+    "Flutes": 4,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "EM8-N3-L",
+   "category": "endmill",
+   "name": "8 mm 3-flute carbide endmill, long series 100 mm (non-ferrous)",
+   "diameter_mm": 8,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 24,
+   "overall_length_mm": 100,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 100,
+    "CuttingEdgeHeight": 24,
+    "Flutes": 3,
+    "ShankDiameter": 8
+   }
+  },
+  {
+   "id": "EM8-U4-L",
+   "category": "endmill",
+   "name": "8 mm 4-flute carbide endmill, long series 100 mm, AlTiN",
+   "diameter_mm": 8,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 24,
+   "overall_length_mm": 100,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 100,
+    "CuttingEdgeHeight": 24,
+    "Flutes": 4,
+    "ShankDiameter": 8
+   }
+  },
+  {
+   "id": "EM10-N3-L",
+   "category": "endmill",
+   "name": "10 mm 3-flute carbide endmill, long series 120 mm (non-ferrous)",
+   "diameter_mm": 10,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 30,
+   "overall_length_mm": 120,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 120,
+    "CuttingEdgeHeight": 30,
+    "Flutes": 3,
+    "ShankDiameter": 10
+   }
+  },
+  {
+   "id": "EM10-U4-L",
+   "category": "endmill",
+   "name": "10 mm 4-flute carbide endmill, long series 120 mm, AlTiN",
+   "diameter_mm": 10,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 30,
+   "overall_length_mm": 120,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 120,
+    "CuttingEdgeHeight": 30,
+    "Flutes": 4,
+    "ShankDiameter": 10
+   }
+  },
+  {
+   "id": "EM12-N3-L",
+   "category": "endmill",
+   "name": "12 mm 3-flute carbide endmill, long series 130 mm (non-ferrous)",
+   "diameter_mm": 12,
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "ZrN",
+   "flute_length_mm": 36,
+   "overall_length_mm": 130,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "N"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 130,
+    "CuttingEdgeHeight": 36,
+    "Flutes": 3,
+    "ShankDiameter": 12
+   }
+  },
+  {
+   "id": "EM12-U4-L",
+   "category": "endmill",
+   "name": "12 mm 4-flute carbide endmill, long series 130 mm, AlTiN",
+   "diameter_mm": 12,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 36,
+   "overall_length_mm": 130,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 130,
+    "CuttingEdgeHeight": 36,
+    "Flutes": 4,
+    "ShankDiameter": 12
+   }
+  },
+  {
+   "id": "BN6R0.5",
+   "category": "bull_endmill",
+   "name": "6 mm corner-radius endmill R0.5, 4-flute AlTiN (roughing hard materials)",
+   "diameter_mm": 6,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 78,
+   "corner_radius_mm": 0.5,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "bullnose.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 78,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 4,
+    "ShankDiameter": 6,
+    "FlatRadius": 2.5
+   }
+  },
+  {
+   "id": "BN8R0.5",
+   "category": "bull_endmill",
+   "name": "8 mm corner-radius endmill R0.5, 4-flute AlTiN (roughing hard materials)",
+   "diameter_mm": 8,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 16,
+   "overall_length_mm": 84,
+   "corner_radius_mm": 0.5,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "bullnose.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 84,
+    "CuttingEdgeHeight": 16,
+    "Flutes": 4,
+    "ShankDiameter": 8,
+    "FlatRadius": 3.5
+   }
+  },
+  {
+   "id": "BN10R1",
+   "category": "bull_endmill",
+   "name": "10 mm corner-radius endmill R1, 4-flute AlTiN (roughing hard materials)",
+   "diameter_mm": 10,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 20,
+   "overall_length_mm": 90,
+   "corner_radius_mm": 1.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "bullnose.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 90,
+    "CuttingEdgeHeight": 20,
+    "Flutes": 4,
+    "ShankDiameter": 10,
+    "FlatRadius": 4.0
+   }
+  },
+  {
+   "id": "BN12R1",
+   "category": "bull_endmill",
+   "name": "12 mm corner-radius endmill R1, 4-flute AlTiN (roughing hard materials)",
+   "diameter_mm": 12,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 24,
+   "overall_length_mm": 96,
+   "corner_radius_mm": 1.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "bullnose.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 96,
+    "CuttingEdgeHeight": 24,
+    "Flutes": 4,
+    "ShankDiameter": 12,
+    "FlatRadius": 5.0
+   }
+  },
+  {
+   "id": "BN16R2",
+   "category": "bull_endmill",
+   "name": "16 mm corner-radius endmill R2, 4-flute AlTiN (roughing hard materials)",
+   "diameter_mm": 16,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 32,
+   "overall_length_mm": 108,
+   "corner_radius_mm": 2.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "bullnose.fcstd",
+   "shape_params": {
+    "Diameter": 16,
+    "Length": 108,
+    "CuttingEdgeHeight": 32,
+    "Flutes": 4,
+    "ShankDiameter": 16,
+    "FlatRadius": 6.0
+   }
+  },
+  {
+   "id": "BEM2",
+   "category": "ball_endmill",
+   "name": "2 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 2,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 5,
+   "overall_length_mm": 56,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 2,
+    "Length": 56,
+    "CuttingEdgeHeight": 5,
+    "Flutes": 2,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "BEM3",
+   "category": "ball_endmill",
+   "name": "3 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 3,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 6,
+   "overall_length_mm": 59,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 3,
+    "Length": 59,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 2,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "BEM4",
+   "category": "ball_endmill",
+   "name": "4 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 4,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 8,
+   "overall_length_mm": 62,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 62,
+    "CuttingEdgeHeight": 8,
+    "Flutes": 2,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "BEM6",
+   "category": "ball_endmill",
+   "name": "6 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 6,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 11,
+   "overall_length_mm": 68,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 68,
+    "CuttingEdgeHeight": 11,
+    "Flutes": 2,
+    "ShankDiameter": 6
+   }
+  },
+  {
+   "id": "BEM8",
+   "category": "ball_endmill",
+   "name": "8 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 8,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 14,
+   "overall_length_mm": 74,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 8,
+    "Length": 74,
+    "CuttingEdgeHeight": 14,
+    "Flutes": 2,
+    "ShankDiameter": 8
+   }
+  },
+  {
+   "id": "BEM10",
+   "category": "ball_endmill",
+   "name": "10 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 10,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 17,
+   "overall_length_mm": 80,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 80,
+    "CuttingEdgeHeight": 17,
+    "Flutes": 2,
+    "ShankDiameter": 10
+   }
+  },
+  {
+   "id": "BEM12",
+   "category": "ball_endmill",
+   "name": "12 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 12,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 20,
+   "overall_length_mm": 86,
+   "corner_radius_mm": 0.0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 86,
+    "CuttingEdgeHeight": 20,
+    "Flutes": 2,
+    "ShankDiameter": 12
+   }
+  },
+  {
+   "id": "FM32",
+   "category": "face_mill",
+   "name": "32 mm 45 deg indexable face mill, 4 inserts",
+   "diameter_mm": 32,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_doc_mm": 3.0,
+   "flute_length_mm": 6,
+   "overall_length_mm": 40,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 32,
+    "Length": 40,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "FM40",
+   "category": "face_mill",
+   "name": "40 mm 45 deg indexable face mill, 4 inserts",
+   "diameter_mm": 40,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_doc_mm": 3.0,
+   "flute_length_mm": 6,
+   "overall_length_mm": 40,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 40,
+    "Length": 40,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "FM50",
+   "category": "face_mill",
+   "name": "50 mm 45 deg indexable face mill, 5 inserts",
+   "diameter_mm": 50,
+   "flutes": 5,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_doc_mm": 4.0,
+   "flute_length_mm": 6,
+   "overall_length_mm": 40,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 50,
+    "Length": 40,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 5
+   }
+  },
+  {
+   "id": "FM63",
+   "category": "face_mill",
+   "name": "63 mm 45 deg indexable face mill, 6 inserts",
+   "diameter_mm": 63,
+   "flutes": 6,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_doc_mm": 4.0,
+   "flute_length_mm": 6,
+   "overall_length_mm": 40,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 63,
+    "Length": 40,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 6
+   }
+  },
+  {
+   "id": "FM80",
+   "category": "face_mill",
+   "name": "80 mm 45 deg indexable face mill, 7 inserts",
+   "diameter_mm": 80,
+   "flutes": 7,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_doc_mm": 4.0,
+   "flute_length_mm": 6,
+   "overall_length_mm": 40,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 9,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 80,
+    "Length": 40,
+    "CuttingEdgeHeight": 6,
+    "Flutes": 7
+   }
+  },
+  {
+   "id": "CH90-6",
+   "category": "chamfer_mill",
+   "name": "6 mm 90 deg chamfer mill, carbide",
+   "diameter_mm": 6,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_doc_mm": 2.75,
+   "flute_length_mm": 2.75,
+   "overall_length_mm": 60,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 60,
+    "CuttingEdgeHeight": 2.75,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 0.5,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "CH90-10",
+   "category": "chamfer_mill",
+   "name": "10 mm 90 deg chamfer mill, carbide",
+   "diameter_mm": 10,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_doc_mm": 4.5,
+   "flute_length_mm": 4.5,
+   "overall_length_mm": 60,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 60,
+    "CuttingEdgeHeight": 4.5,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "CH90-16",
+   "category": "chamfer_mill",
+   "name": "16 mm 90 deg chamfer mill, carbide",
+   "diameter_mm": 16,
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_doc_mm": 7.0,
+   "flute_length_mm": 7.0,
+   "overall_length_mm": 60,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 16,
+    "Length": 60,
+    "CuttingEdgeHeight": 7.0,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 2.0,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "SD4",
+   "category": "spot_drill",
+   "name": "4 mm 90 deg NC spot drill, carbide",
+   "diameter_mm": 4,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "overall_length_mm": 54,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Diameter": 4,
+    "Length": 54,
+    "TipAngle": 90,
+    "Flutes": 2
+   }
+  },
+  {
+   "id": "SD6",
+   "category": "spot_drill",
+   "name": "6 mm 90 deg NC spot drill, carbide",
+   "diameter_mm": 6,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "overall_length_mm": 56,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Diameter": 6,
+    "Length": 56,
+    "TipAngle": 90,
+    "Flutes": 2
+   }
+  },
+  {
+   "id": "SD10",
+   "category": "spot_drill",
+   "name": "10 mm 90 deg NC spot drill, carbide",
+   "diameter_mm": 10,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "overall_length_mm": 60,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Diameter": 10,
+    "Length": 60,
+    "TipAngle": 90,
+    "Flutes": 2
+   }
+  },
+  {
+   "id": "SD12",
+   "category": "spot_drill",
+   "name": "12 mm 90 deg NC spot drill, carbide",
+   "diameter_mm": 12,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "overall_length_mm": 62,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Diameter": 12,
+    "Length": 62,
+    "TipAngle": 90,
+    "Flutes": 2
+   }
+  },
+  {
+   "id": "DR-C5D",
+   "category": "twist_drill",
+   "name": "Solid carbide drill DIN 6537 K (5xD), 140 deg, AlTiN, 3.0-20.0 mm in 0.1 mm steps",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    3.0,
+    20.0
+   ],
+   "diameter_step_mm": 0.1,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_depth_x_d": 5,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Length": 100,
+    "TipAngle": 140,
+    "Flutes": 2
+   },
+   "standard": "DIN 6537 K"
+  },
+  {
+   "id": "DR-C8D",
+   "category": "twist_drill",
+   "name": "Solid carbide drill DIN 6537 L (8xD), 140 deg, AlTiN, 3.0-12.0 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    3.0,
+    12.0
+   ],
+   "diameter_step_mm": 0.1,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_depth_x_d": 8,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Length": 140,
+    "TipAngle": 140,
+    "Flutes": 2
+   },
+   "standard": "DIN 6537 L"
+  },
+  {
+   "id": "DR-HSS",
+   "category": "twist_drill",
+   "name": "HSS-Co twist drill DIN 338 (jobber), 118 deg, 1.0-13.0 mm in 0.1 mm steps",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    1.0,
+    13.0
+   ],
+   "diameter_step_mm": 0.1,
+   "flutes": 2,
+   "tool_material": "HSS",
+   "coating": "uncoated",
+   "max_depth_x_d": 6,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 11,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Length": 100,
+    "TipAngle": 118,
+    "Flutes": 2
+   },
+   "standard": "DIN 338"
+  },
+  {
+   "id": "DR-HSS-L",
+   "category": "twist_drill",
+   "name": "HSS-Co long drill DIN 340, 130 deg, 2.0-13.0 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    2.0,
+    13.0
+   ],
+   "diameter_step_mm": 0.1,
+   "flutes": 2,
+   "tool_material": "HSS",
+   "coating": "uncoated",
+   "max_depth_x_d": 12,
+   "iso": [
+    "P",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 11,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Length": 160,
+    "TipAngle": 130,
+    "Flutes": 2
+   },
+   "standard": "DIN 340"
+  },
+  {
+   "id": "DR-IND",
+   "category": "twist_drill",
+   "name": "Indexable insert drill 3xD, 14-40 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    14.0,
+    40.0
+   ],
+   "diameter_step_mm": 0.5,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "max_depth_x_d": 3,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 12,
+   "freecad_shape": "drill.fcstd",
+   "shape_params": {
+    "Length": 150,
+    "TipAngle": 140,
+    "Flutes": 2
+   }
+  },
+  {
+   "id": "RM-C",
+   "category": "reamer",
+   "name": "Solid carbide machine reamer H7, 3-20 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    3.0,
+    20.0
+   ],
+   "diameter_step_mm": 0.01,
+   "flutes": 6,
+   "tool_material": "carbide",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 7,
+   "freecad_shape": "reamer.fcstd",
+   "shape_params": {
+    "Length": 100,
+    "Flutes": 6
+   }
+  },
+  {
+   "id": "RM-HSS",
+   "category": "reamer",
+   "name": "HSS-E machine reamer DIN 212 H7, 3-25 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    3.0,
+    25.0
+   ],
+   "diameter_step_mm": 0.01,
+   "flutes": 6,
+   "tool_material": "HSS",
+   "coating": "TiN",
+   "iso": [
+    "P",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 7,
+   "freecad_shape": "reamer.fcstd",
+   "shape_params": {
+    "Length": 120,
+    "Flutes": 6
+   }
+  },
+  {
+   "id": "BB-S",
+   "category": "boring_bar",
+   "name": "Fine boring bar 6-20 mm (micro-adjustable)",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    6.0,
+    20.0
+   ],
+   "diameter_step_mm": 0.001,
+   "flutes": 1,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 6,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Length": 100,
+    "CuttingEdgeHeight": 20,
+    "Flutes": 1
+   }
+  },
+  {
+   "id": "BB-L",
+   "category": "boring_bar",
+   "name": "Fine boring head 20-100 mm",
+   "diameter_mm": null,
+   "diameter_range_mm": [
+    20.0,
+    100.0
+   ],
+   "diameter_step_mm": 0.001,
+   "flutes": 1,
+   "tool_material": "carbide",
+   "coating": "PVD",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S"
+   ],
+   "tolerance_it": 6,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Length": 140,
+    "CuttingEdgeHeight": 30,
+    "Flutes": 1
+   }
+  },
+  {
+   "id": "CS90-10.4",
+   "category": "countersink",
+   "name": "10.4 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 10.4,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 10.4,
+    "Length": 50,
+    "CuttingEdgeHeight": 5.2,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "CS90-12.4",
+   "category": "countersink",
+   "name": "12.4 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 12.4,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 12.4,
+    "Length": 50,
+    "CuttingEdgeHeight": 6.2,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "CS90-16.5",
+   "category": "countersink",
+   "name": "16.5 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 16.5,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 16.5,
+    "Length": 50,
+    "CuttingEdgeHeight": 8.25,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "CS90-20.5",
+   "category": "countersink",
+   "name": "20.5 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 20.5,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 20.5,
+    "Length": 50,
+    "CuttingEdgeHeight": 10.25,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "CS90-25",
+   "category": "countersink",
+   "name": "25 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 25.0,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 25.0,
+    "Length": 50,
+    "CuttingEdgeHeight": 12.5,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "CS90-31",
+   "category": "countersink",
+   "name": "31 mm 90 deg countersink ISO 15065 / DIN 335 C, HSS-Co",
+   "diameter_mm": 31.0,
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiAlN",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 31.0,
+    "Length": 50,
+    "CuttingEdgeHeight": 15.5,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 1.0,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "TAP-SF",
+   "category": "tap",
+   "name": "HSS-E spiral-flute machine taps, blind holes (ISO 529 / DIN 371-376), M2-M24, MF, UNC/UNF",
+   "diameter_mm": null,
+   "thread_standards": [
+    "M",
+    "MF",
+    "UNC",
+    "UNF"
+   ],
+   "thread_major_range_mm": [
+    2.0,
+    24.0
+   ],
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiCN",
+   "hole_type": "blind",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 7,
+   "freecad_shape": "tap.fcstd",
+   "shape_params": {
+    "Length": 90,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "TAP-SP",
+   "category": "tap",
+   "name": "HSS-E spiral-point machine taps, through holes, M2-M24, MF, UNC/UNF",
+   "diameter_mm": null,
+   "thread_standards": [
+    "M",
+    "MF",
+    "UNC",
+    "UNF"
+   ],
+   "thread_major_range_mm": [
+    2.0,
+    24.0
+   ],
+   "flutes": 3,
+   "tool_material": "HSS",
+   "coating": "TiCN",
+   "hole_type": "through",
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N"
+   ],
+   "tolerance_it": 7,
+   "freecad_shape": "tap.fcstd",
+   "shape_params": {
+    "Length": 90,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "TAP-C",
+   "category": "tap",
+   "name": "Solid carbide taps for cast iron and titanium, M3-M16",
+   "diameter_mm": null,
+   "thread_standards": [
+    "M",
+    "MF"
+   ],
+   "thread_major_range_mm": [
+    3.0,
+    16.0
+   ],
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "TiCN",
+   "hole_type": "any",
+   "iso": [
+    "K",
+    "S"
+   ],
+   "tolerance_it": 7,
+   "freecad_shape": "tap.fcstd",
+   "shape_params": {
+    "Length": 90,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "THM-3",
+   "category": "thread_mill",
+   "name": "Single-profile carbide thread mill D3.0 (pitch 0.5-1.0, internal threads >= M4)",
+   "diameter_mm": 3.0,
+   "pitch_range_mm": [
+    0.5,
+    1.0
+   ],
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 10,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 6,
+   "freecad_shape": "thread-mill.fcstd",
+   "shape_params": {
+    "Diameter": 3.0,
+    "Length": 60,
+    "Crest": 0.1,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "THM-6",
+   "category": "thread_mill",
+   "name": "Single-profile carbide thread mill D6.0 (pitch 1.0-2.0, internal threads >= M8)",
+   "diameter_mm": 6.0,
+   "pitch_range_mm": [
+    1.0,
+    2.0
+   ],
+   "flutes": 3,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 20,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 6,
+   "freecad_shape": "thread-mill.fcstd",
+   "shape_params": {
+    "Diameter": 6.0,
+    "Length": 70,
+    "Crest": 0.15,
+    "Flutes": 3
+   }
+  },
+  {
+   "id": "THM-10",
+   "category": "thread_mill",
+   "name": "Single-profile carbide thread mill D10.0 (pitch 1.5-3.0, internal threads >= M14)",
+   "diameter_mm": 10.0,
+   "pitch_range_mm": [
+    1.5,
+    3.0
+   ],
+   "flutes": 4,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 30,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 6,
+   "freecad_shape": "thread-mill.fcstd",
+   "shape_params": {
+    "Diameter": 10.0,
+    "Length": 80,
+    "Crest": 0.2,
+    "Flutes": 4
+   }
+  },
+  {
+   "id": "EM1-U2",
+   "category": "endmill",
+   "name": "1 mm 2-flute carbide micro endmill, AlTiN (steel, stainless, non-ferrous, Ti)",
+   "diameter_mm": 1,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 4,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 1,
+    "Length": 50,
+    "CuttingEdgeHeight": 4,
+    "Flutes": 2,
+    "ShankDiameter": 4
+   }
+  },
+  {
+   "id": "EM1-U2-L",
+   "category": "endmill",
+   "name": "1 mm 2-flute carbide long-reach endmill, 12 mm neck (pockets, deep slots)",
+   "diameter_mm": 1,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 12,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "endmill.fcstd",
+   "shape_params": {
+    "Diameter": 1,
+    "Length": 50,
+    "CuttingEdgeHeight": 12,
+    "Flutes": 2,
+    "ShankDiameter": 4
+   }
+  },
+  {
+   "id": "BEM1",
+   "category": "ball_endmill",
+   "name": "1 mm ball-nose endmill, 2-flute carbide AlTiN",
+   "diameter_mm": 1,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "flute_length_mm": 3,
+   "overall_length_mm": 50,
+   "corner_radius_mm": 0,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 8,
+   "freecad_shape": "ballend.fcstd",
+   "shape_params": {
+    "Diameter": 1,
+    "Length": 50,
+    "CuttingEdgeHeight": 3,
+    "Flutes": 2,
+    "ShankDiameter": 4
+   }
+  },
+  {
+   "id": "CH90-3",
+   "category": "chamfer_mill",
+   "name": "3 mm 90 deg micro chamfer mill, carbide",
+   "diameter_mm": 3,
+   "flutes": 2,
+   "tool_material": "carbide",
+   "coating": "AlTiN",
+   "max_doc_mm": 1.4,
+   "flute_length_mm": 1.4,
+   "overall_length_mm": 50,
+   "iso": [
+    "P",
+    "M",
+    "K",
+    "N",
+    "S",
+    "H"
+   ],
+   "tolerance_it": 10,
+   "freecad_shape": "chamfer.fcstd",
+   "shape_params": {
+    "Diameter": 3,
+    "Length": 50,
+    "CuttingEdgeHeight": 1.4,
+    "CuttingEdgeAngle": 90,
+    "TipDiameter": 0.2,
+    "Flutes": 2,
+    "ShankDiameter": 4
+   }
+  }
+ ]
+}
