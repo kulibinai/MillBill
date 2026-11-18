@@ -28,7 +28,7 @@ Prismatic stocks, under `prismatic stock/<kind>/<id>/`. A stepped casting, forgi
 | `plate strip` | plate strip | 134 |
 | `sheet` | sheet | 286 |
 
-The 100-part benchmark in the paper is a stratified draw from this collection, with random seed 2026: ten parts with a turned stock and ten from each of the eight prismatic kinds, then ten more from the remaining candidates. That draw is not copied out as a separate directory.
+The 100-part benchmark in the paper is a stratified draw from this collection, with random seed 2026: ten parts with a turned stock and ten from each of the eight prismatic kinds, then ten more from the remaining candidates. [`evaluation.json`](evaluation.json) lists those 100 parts. Each entry names the `blank.step` and `part.json` of that part, with paths relative to this directory. The metrics in the paper use a tolerance of 0.1 mm, which is recorded in that file. The draw is not copied out as a separate directory.
 
 ## Files
 

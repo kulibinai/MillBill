@@ -1,0 +1,706 @@
+{
+  "seed": 2026,
+  "tolerance_mm": 0.1,
+  "parts": [
+    {
+      "id": "p00089",
+      "files": [
+        "prismatic stock/plate/p00089/blank.step",
+        "prismatic stock/plate/p00089/part.json"
+      ]
+    },
+    {
+      "id": "p00114",
+      "files": [
+        "prismatic stock/flat bar/p00114/blank.step",
+        "prismatic stock/flat bar/p00114/part.json"
+      ]
+    },
+    {
+      "id": "p00178",
+      "files": [
+        "prismatic stock/casting/p00178/blank.step",
+        "prismatic stock/casting/p00178/part.json"
+      ]
+    },
+    {
+      "id": "p00431",
+      "files": [
+        "prismatic stock/forging/p00431/blank.step",
+        "prismatic stock/forging/p00431/part.json"
+      ]
+    },
+    {
+      "id": "p00445",
+      "files": [
+        "prismatic stock/sheet/p00445/blank.step",
+        "prismatic stock/sheet/p00445/part.json"
+      ]
+    },
+    {
+      "id": "p00486",
+      "files": [
+        "prismatic stock/forging/p00486/blank.step",
+        "prismatic stock/forging/p00486/part.json"
+      ]
+    },
+    {
+      "id": "p00531",
+      "files": [
+        "prismatic stock/casting/p00531/blank.step",
+        "prismatic stock/casting/p00531/part.json"
+      ]
+    },
+    {
+      "id": "p00556",
+      "files": [
+        "prismatic stock/square/p00556/blank.step",
+        "prismatic stock/square/p00556/part.json"
+      ]
+    },
+    {
+      "id": "p00696",
+      "files": [
+        "prismatic stock/plate/p00696/blank.step",
+        "prismatic stock/plate/p00696/part.json"
+      ]
+    },
+    {
+      "id": "p00702",
+      "files": [
+        "prismatic stock/casting/p00702/blank.step",
+        "prismatic stock/casting/p00702/part.json"
+      ]
+    },
+    {
+      "id": "p00741",
+      "files": [
+        "prismatic stock/square/p00741/blank.step",
+        "prismatic stock/square/p00741/part.json"
+      ]
+    },
+    {
+      "id": "p00749",
+      "files": [
+        "prismatic stock/plate strip/p00749/blank.step",
+        "prismatic stock/plate strip/p00749/part.json"
+      ]
+    },
+    {
+      "id": "p00770",
+      "files": [
+        "turned stock/p00770/blank.step",
+        "turned stock/p00770/part.json"
+      ]
+    },
+    {
+      "id": "p00820",
+      "files": [
+        "prismatic stock/casting/p00820/blank.step",
+        "prismatic stock/casting/p00820/part.json"
+      ]
+    },
+    {
+      "id": "p00938",
+      "files": [
+        "prismatic stock/sheet/p00938/blank.step",
+        "prismatic stock/sheet/p00938/part.json"
+      ]
+    },
+    {
+      "id": "p01083",
+      "files": [
+        "turned stock/p01083/blank.step",
+        "turned stock/p01083/part.json"
+      ]
+    },
+    {
+      "id": "p01166",
+      "files": [
+        "prismatic stock/square/p01166/blank.step",
+        "prismatic stock/square/p01166/part.json"
+      ]
+    },
+    {
+      "id": "p01263",
+      "files": [
+        "prismatic stock/plate strip/p01263/blank.step",
+        "prismatic stock/plate strip/p01263/part.json"
+      ]
+    },
+    {
+      "id": "p01518",
+      "files": [
+        "prismatic stock/flat bar/p01518/blank.step",
+        "prismatic stock/flat bar/p01518/part.json"
+      ]
+    },
+    {
+      "id": "p01558",
+      "files": [
+        "prismatic stock/plate/p01558/blank.step",
+        "prismatic stock/plate/p01558/part.json"
+      ]
+    },
+    {
+      "id": "p01582",
+      "files": [
+        "prismatic stock/sheet/p01582/blank.step",
+        "prismatic stock/sheet/p01582/part.json"
+      ]
+    },
+    {
+      "id": "p01703",
+      "files": [
+        "prismatic stock/sheet/p01703/blank.step",
+        "prismatic stock/sheet/p01703/part.json"
+      ]
+    },
+    {
+      "id": "p01816",
+      "files": [
+        "prismatic stock/plate/p01816/blank.step",
+        "prismatic stock/plate/p01816/part.json"
+      ]
+    },
+    {
+      "id": "p01870",
+      "files": [
+        "prismatic stock/forging/p01870/blank.step",
+        "prismatic stock/forging/p01870/part.json"
+      ]
+    },
+    {
+      "id": "p01872",
+      "files": [
+        "prismatic stock/forging/p01872/blank.step",
+        "prismatic stock/forging/p01872/part.json"
+      ]
+    },
+    {
+      "id": "p01958",
+      "files": [
+        "prismatic stock/casting/p01958/blank.step",
+        "prismatic stock/casting/p01958/part.json"
+      ]
+    },
+    {
+      "id": "p02058",
+      "files": [
+        "prismatic stock/flat bar/p02058/blank.step",
+        "prismatic stock/flat bar/p02058/part.json"
+      ]
+    },
+    {
+      "id": "p02092",
+      "files": [
+        "prismatic stock/forging/p02092/blank.step",
+        "prismatic stock/forging/p02092/part.json"
+      ]
+    },
+    {
+      "id": "p02146",
+      "files": [
+        "prismatic stock/sheet/p02146/blank.step",
+        "prismatic stock/sheet/p02146/part.json"
+      ]
+    },
+    {
+      "id": "p02191",
+      "files": [
+        "turned stock/p02191/blank.step",
+        "turned stock/p02191/part.json"
+      ]
+    },
+    {
+      "id": "p02203",
+      "files": [
+        "prismatic stock/profile/p02203/blank.step",
+        "prismatic stock/profile/p02203/part.json"
+      ]
+    },
+    {
+      "id": "p02207",
+      "files": [
+        "prismatic stock/forging/p02207/blank.step",
+        "prismatic stock/forging/p02207/part.json"
+      ]
+    },
+    {
+      "id": "p02274",
+      "files": [
+        "prismatic stock/sheet/p02274/blank.step",
+        "prismatic stock/sheet/p02274/part.json"
+      ]
+    },
+    {
+      "id": "p02332",
+      "files": [
+        "prismatic stock/flat bar/p02332/blank.step",
+        "prismatic stock/flat bar/p02332/part.json"
+      ]
+    },
+    {
+      "id": "p02334",
+      "files": [
+        "prismatic stock/sheet/p02334/blank.step",
+        "prismatic stock/sheet/p02334/part.json"
+      ]
+    },
+    {
+      "id": "p02418",
+      "files": [
+        "prismatic stock/casting/p02418/blank.step",
+        "prismatic stock/casting/p02418/part.json"
+      ]
+    },
+    {
+      "id": "p02687",
+      "files": [
+        "prismatic stock/plate strip/p02687/blank.step",
+        "prismatic stock/plate strip/p02687/part.json"
+      ]
+    },
+    {
+      "id": "p02817",
+      "files": [
+        "prismatic stock/flat bar/p02817/blank.step",
+        "prismatic stock/flat bar/p02817/part.json"
+      ]
+    },
+    {
+      "id": "p02837",
+      "files": [
+        "prismatic stock/sheet/p02837/blank.step",
+        "prismatic stock/sheet/p02837/part.json"
+      ]
+    },
+    {
+      "id": "p02853",
+      "files": [
+        "prismatic stock/sheet/p02853/blank.step",
+        "prismatic stock/sheet/p02853/part.json"
+      ]
+    },
+    {
+      "id": "p02863",
+      "files": [
+        "prismatic stock/forging/p02863/blank.step",
+        "prismatic stock/forging/p02863/part.json"
+      ]
+    },
+    {
+      "id": "p02905",
+      "files": [
+        "prismatic stock/sheet/p02905/blank.step",
+        "prismatic stock/sheet/p02905/part.json"
+      ]
+    },
+    {
+      "id": "p03081",
+      "files": [
+        "turned stock/p03081/blank.step",
+        "turned stock/p03081/part.json"
+      ]
+    },
+    {
+      "id": "p03086",
+      "files": [
+        "prismatic stock/plate/p03086/blank.step",
+        "prismatic stock/plate/p03086/part.json"
+      ]
+    },
+    {
+      "id": "p03152",
+      "files": [
+        "prismatic stock/flat bar/p03152/blank.step",
+        "prismatic stock/flat bar/p03152/part.json"
+      ]
+    },
+    {
+      "id": "p03181",
+      "files": [
+        "prismatic stock/plate strip/p03181/blank.step",
+        "prismatic stock/plate strip/p03181/part.json"
+      ]
+    },
+    {
+      "id": "p03189",
+      "files": [
+        "prismatic stock/flat bar/p03189/blank.step",
+        "prismatic stock/flat bar/p03189/part.json"
+      ]
+    },
+    {
+      "id": "p03209",
+      "files": [
+        "prismatic stock/flat bar/p03209/blank.step",
+        "prismatic stock/flat bar/p03209/part.json"
+      ]
+    },
+    {
+      "id": "p03218",
+      "files": [
+        "prismatic stock/forging/p03218/blank.step",
+        "prismatic stock/forging/p03218/part.json"
+      ]
+    },
+    {
+      "id": "p03242",
+      "files": [
+        "prismatic stock/forging/p03242/blank.step",
+        "prismatic stock/forging/p03242/part.json"
+      ]
+    },
+    {
+      "id": "p03332",
+      "files": [
+        "prismatic stock/flat bar/p03332/blank.step",
+        "prismatic stock/flat bar/p03332/part.json"
+      ]
+    },
+    {
+      "id": "p03369",
+      "files": [
+        "prismatic stock/profile/p03369/blank.step",
+        "prismatic stock/profile/p03369/part.json"
+      ]
+    },
+    {
+      "id": "p03383",
+      "files": [
+        "prismatic stock/profile/p03383/blank.step",
+        "prismatic stock/profile/p03383/part.json"
+      ]
+    },
+    {
+      "id": "p03500",
+      "files": [
+        "prismatic stock/flat bar/p03500/blank.step",
+        "prismatic stock/flat bar/p03500/part.json"
+      ]
+    },
+    {
+      "id": "p03502",
+      "files": [
+        "prismatic stock/plate strip/p03502/blank.step",
+        "prismatic stock/plate strip/p03502/part.json"
+      ]
+    },
+    {
+      "id": "p03548",
+      "files": [
+        "prismatic stock/plate strip/p03548/blank.step",
+        "prismatic stock/plate strip/p03548/part.json"
+      ]
+    },
+    {
+      "id": "p03553",
+      "files": [
+        "prismatic stock/profile/p03553/blank.step",
+        "prismatic stock/profile/p03553/part.json"
+      ]
+    },
+    {
+      "id": "p03674",
+      "files": [
+        "prismatic stock/plate/p03674/blank.step",
+        "prismatic stock/plate/p03674/part.json"
+      ]
+    },
+    {
+      "id": "p03718",
+      "files": [
+        "prismatic stock/square/p03718/blank.step",
+        "prismatic stock/square/p03718/part.json"
+      ]
+    },
+    {
+      "id": "p03881",
+      "files": [
+        "prismatic stock/plate strip/p03881/blank.step",
+        "prismatic stock/plate strip/p03881/part.json"
+      ]
+    },
+    {
+      "id": "p03901",
+      "files": [
+        "prismatic stock/forging/p03901/blank.step",
+        "prismatic stock/forging/p03901/part.json"
+      ]
+    },
+    {
+      "id": "p03907",
+      "files": [
+        "prismatic stock/square/p03907/blank.step",
+        "prismatic stock/square/p03907/part.json"
+      ]
+    },
+    {
+      "id": "p04119",
+      "files": [
+        "prismatic stock/plate/p04119/blank.step",
+        "prismatic stock/plate/p04119/part.json"
+      ]
+    },
+    {
+      "id": "p04164",
+      "files": [
+        "prismatic stock/casting/p04164/blank.step",
+        "prismatic stock/casting/p04164/part.json"
+      ]
+    },
+    {
+      "id": "p04237",
+      "files": [
+        "turned stock/p04237/blank.step",
+        "turned stock/p04237/part.json"
+      ]
+    },
+    {
+      "id": "p04254",
+      "files": [
+        "prismatic stock/casting/p04254/blank.step",
+        "prismatic stock/casting/p04254/part.json"
+      ]
+    },
+    {
+      "id": "p04285",
+      "files": [
+        "prismatic stock/flat bar/p04285/blank.step",
+        "prismatic stock/flat bar/p04285/part.json"
+      ]
+    },
+    {
+      "id": "p04300",
+      "files": [
+        "prismatic stock/plate/p04300/blank.step",
+        "prismatic stock/plate/p04300/part.json"
+      ]
+    },
+    {
+      "id": "p04382",
+      "files": [
+        "prismatic stock/square/p04382/blank.step",
+        "prismatic stock/square/p04382/part.json"
+      ]
+    },
+    {
+      "id": "p04438",
+      "files": [
+        "prismatic stock/flat bar/p04438/blank.step",
+        "prismatic stock/flat bar/p04438/part.json"
+      ]
+    },
+    {
+      "id": "p04456",
+      "files": [
+        "prismatic stock/profile/p04456/blank.step",
+        "prismatic stock/profile/p04456/part.json"
+      ]
+    },
+    {
+      "id": "p04462",
+      "files": [
+        "prismatic stock/forging/p04462/blank.step",
+        "prismatic stock/forging/p04462/part.json"
+      ]
+    },
+    {
+      "id": "p04650",
+      "files": [
+        "prismatic stock/sheet/p04650/blank.step",
+        "prismatic stock/sheet/p04650/part.json"
+      ]
+    },
+    {
+      "id": "p04658",
+      "files": [
+        "prismatic stock/plate strip/p04658/blank.step",
+        "prismatic stock/plate strip/p04658/part.json"
+      ]
+    },
+    {
+      "id": "p04676",
+      "files": [
+        "prismatic stock/square/p04676/blank.step",
+        "prismatic stock/square/p04676/part.json"
+      ]
+    },
+    {
+      "id": "p04689",
+      "files": [
+        "prismatic stock/square/p04689/blank.step",
+        "prismatic stock/square/p04689/part.json"
+      ]
+    },
+    {
+      "id": "p04698",
+      "files": [
+        "prismatic stock/plate strip/p04698/blank.step",
+        "prismatic stock/plate strip/p04698/part.json"
+      ]
+    },
+    {
+      "id": "p04699",
+      "files": [
+        "prismatic stock/plate strip/p04699/blank.step",
+        "prismatic stock/plate strip/p04699/part.json"
+      ]
+    },
+    {
+      "id": "p04710",
+      "files": [
+        "prismatic stock/profile/p04710/blank.step",
+        "prismatic stock/profile/p04710/part.json"
+      ]
+    },
+    {
+      "id": "p04726",
+      "files": [
+        "prismatic stock/profile/p04726/blank.step",
+        "prismatic stock/profile/p04726/part.json"
+      ]
+    },
+    {
+      "id": "p04781",
+      "files": [
+        "prismatic stock/square/p04781/blank.step",
+        "prismatic stock/square/p04781/part.json"
+      ]
+    },
+    {
+      "id": "p04783",
+      "files": [
+        "prismatic stock/square/p04783/blank.step",
+        "prismatic stock/square/p04783/part.json"
+      ]
+    },
+    {
+      "id": "p04821",
+      "files": [
+        "prismatic stock/profile/p04821/blank.step",
+        "prismatic stock/profile/p04821/part.json"
+      ]
+    },
+    {
+      "id": "p04831",
+      "files": [
+        "prismatic stock/profile/p04831/blank.step",
+        "prismatic stock/profile/p04831/part.json"
+      ]
+    },
+    {
+      "id": "p04843",
+      "files": [
+        "prismatic stock/plate/p04843/blank.step",
+        "prismatic stock/plate/p04843/part.json"
+      ]
+    },
+    {
+      "id": "p04870",
+      "files": [
+        "prismatic stock/casting/p04870/blank.step",
+        "prismatic stock/casting/p04870/part.json"
+      ]
+    },
+    {
+      "id": "p04991",
+      "files": [
+        "prismatic stock/sheet/p04991/blank.step",
+        "prismatic stock/sheet/p04991/part.json"
+      ]
+    },
+    {
+      "id": "p05005",
+      "files": [
+        "turned stock/p05005/blank.step",
+        "turned stock/p05005/part.json"
+      ]
+    },
+    {
+      "id": "p05025",
+      "files": [
+        "prismatic stock/plate/p05025/blank.step",
+        "prismatic stock/plate/p05025/part.json"
+      ]
+    },
+    {
+      "id": "p05053",
+      "files": [
+        "turned stock/p05053/blank.step",
+        "turned stock/p05053/part.json"
+      ]
+    },
+    {
+      "id": "p05088",
+      "files": [
+        "prismatic stock/profile/p05088/blank.step",
+        "prismatic stock/profile/p05088/part.json"
+      ]
+    },
+    {
+      "id": "p05230",
+      "files": [
+        "turned stock/p05230/blank.step",
+        "turned stock/p05230/part.json"
+      ]
+    },
+    {
+      "id": "p05385",
+      "files": [
+        "prismatic stock/square/p05385/blank.step",
+        "prismatic stock/square/p05385/part.json"
+      ]
+    },
+    {
+      "id": "p05427",
+      "files": [
+        "prismatic stock/sheet/p05427/blank.step",
+        "prismatic stock/sheet/p05427/part.json"
+      ]
+    },
+    {
+      "id": "p05451",
+      "files": [
+        "turned stock/p05451/blank.step",
+        "turned stock/p05451/part.json"
+      ]
+    },
+    {
+      "id": "p05541",
+      "files": [
+        "prismatic stock/profile/p05541/blank.step",
+        "prismatic stock/profile/p05541/part.json"
+      ]
+    },
+    {
+      "id": "p05597",
+      "files": [
+        "turned stock/p05597/blank.step",
+        "turned stock/p05597/part.json"
+      ]
+    },
+    {
+      "id": "p05687",
+      "files": [
+        "prismatic stock/plate/p05687/blank.step",
+        "prismatic stock/plate/p05687/part.json"
+      ]
+    },
+    {
+      "id": "p05719",
+      "files": [
+        "prismatic stock/casting/p05719/blank.step",
+        "prismatic stock/casting/p05719/part.json"
+      ]
+    },
+    {
+      "id": "p05791",
+      "files": [
+        "turned stock/p05791/blank.step",
+        "turned stock/p05791/part.json"
+      ]
+    }
+  ]
+}

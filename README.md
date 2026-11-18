@@ -8,7 +8,7 @@ MillBill turns a boundary-representation part, its milling stock and its materia
 
 | Path        | Contents                                                                                                                                                                  |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dataset/`  | GrabCAD parts paired with milling stocks, including the 100-part evaluation split used in the paper. The full description is in [`dataset/README.md`](dataset/README.md). |
+| `dataset/`  | GrabCAD parts paired with milling stocks. The 100 parts scored in the paper are listed in [`dataset/evaluation.json`](dataset/evaluation.json). The full description is in [`dataset/README.md`](dataset/README.md). |
 | `cam_agent/` | The harness. Feature recognition, reach-aware setup planning, the planning agents, toolpaths, G-code, material-removal simulation and geometric feedback. Run with `python -m cam_agent`. |
 | `examples/` | `make_demo_part.py`: a FreeCAD script that builds a small demo bracket and writes its STEP file.                                                                          |
 | `tests/`    | Offline checks of planning, tool selection, CAM generation and the FreeCAD runner. They do not machine the evaluation set.                                                |
@@ -47,7 +47,7 @@ An answer is `answer.json` plus one G-code file per setup. `task/prompt.md` stat
 
 The surface figure is the share of the target surface within the tolerance (0.1 mm unless the task sets another). Points lie on the B-rep faces and are probed along the normals into the exact swept volume of the cutters. The same file reports cycle time, tool changes, ordering against standard practice, cutting data outside 0.5–1.5× the reference model, and safety issues: a tap without a rigid tapping cycle, a reamer or boring bar retracting at rapid, a rapid into the stock.
 
-The 100-part evaluation split in the paper is the stratified draw described in [`dataset/README.md`](dataset/README.md). It is not a separate directory.
+The 100 parts scored in the paper are listed in [`dataset/evaluation.json`](dataset/evaluation.json). Each entry names that part's `blank.step` and `part.json`. How the draw was made is in [`dataset/README.md`](dataset/README.md).
 
 To recompute the surface metric of a saved session without re-running CAM:
 
