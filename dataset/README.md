@@ -12,8 +12,8 @@ Turned stocks, under `turned stock/<id>/`:
 
 | Kind | Parts | Construction |
 |---|---:|---|
-| Stepped shaft | 694 | 1 mm of allowance |
-| Solid of revolution | 702 | No allowance; local cavities filled out to the circumscribed circle |
+| Stepped shaft | 693 | 1 mm of allowance |
+| Solid of revolution | 703 | No allowance; local cavities filled out to the circumscribed circle |
 
 Prismatic stocks, under `prismatic stock/<kind>/<id>/`. A stepped casting, forging, or profile, or a rolled flat bar, square bar, plate, plate strip, or sheet:
 
@@ -46,7 +46,7 @@ Each part directory contains only:
 }
 ```
 
-The material is the workpiece material assigned for MillBill from its knowledge base. It is not a material stated by the GrabCAD author. The URL is the library page of the source model. For 21 parts that page was not stored, and the URL is formed from the GrabCAD slug; those links were not verified against the live library.
+The material is the workpiece material specified by the author of the model on GrabCAD. The URL is the library page of the source model. For 21 parts that page was not stored, and the URL is formed from the GrabCAD slug; those links were not verified against the live library.
 
 ## GrabCAD
 
